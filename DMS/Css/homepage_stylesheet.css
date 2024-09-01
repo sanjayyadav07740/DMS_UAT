@@ -1,0 +1,12 @@
+﻿body {
+}
+.user_creation_page_header
+{
+    font-family:Verdana;
+    font-size:14px;
+    font-weight:bold;
+    color:Black;
+    text-align:center;
+    margin-top:25px;
+    margin-bottom:10px;
+}

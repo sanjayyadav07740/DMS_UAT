@@ -1,0 +1,68 @@
+﻿
+<asp:RequiredFieldValidator Runat="server" ForeColor="Red" Font-Bold="true" Display="Dynamic" Text="*"></asp:RequiredFieldValidator>
+<ajaxtoolkit:MaskedEditValidator Runat="server" ForeColor="Red" Font-Bold="true" ></ajaxtoolkit:MaskedEditValidator>
+<asp:CompareValidator Runat="server" ForeColor="Red" Font-Bold="true" ></asp:CompareValidator>
+
+ <ajaxtoolkit:FilteredTextBoxExtender  runat="server" SkinID = "String" FilterType="LowercaseLetters,UppercaseLetters,Numbers,Custom" ValidChars=" "></ajaxtoolkit:FilteredTextBoxExtender>
+ <ajaxtoolkit:FilteredTextBoxExtender  runat="server" SkinID = "OnlyString" FilterType="LowercaseLetters,UppercaseLetters,Custom" ValidChars=" "></ajaxtoolkit:FilteredTextBoxExtender>
+ <ajaxtoolkit:FilteredTextBoxExtender  runat="server" SkinID = "OnlyNumber" FilterType="Numbers"></ajaxtoolkit:FilteredTextBoxExtender>
+
+<asp:Label Runat="server" class="bluevardana11" SkinID="NormalText" ></asp:Label>
+<asp:Label Runat="server" Font-Bold="true" class="blueboldvardanabg"></asp:Label>
+<asp:Label Runat="server" CssClass="blueboldvardanabgTitle" SkinId="Title" Font-Names="verdana" Font-Underline="true" Font-Size="Large" ForeColor="#364943" Font-Bold="true"  BorderStyle="Solid" BorderWidth="0" Width="940" height="50"></asp:Label>
+<asp:Label Runat="server" CssClass="blueboldvardanabg" SkinId="SubTitle" ></asp:Label>
+
+
+<asp:GridView Runat="server">
+     <HeaderStyle CssClass="gridheader" />
+     <RowStyle CssClass="gridrow"/>
+     <PagerStyle HorizontalAlign="Center" BackColor="#F0F0F6"/>
+ </asp:GridView>
+
+<asp:TextBox Runat="server" Width="300px"/>
+<asp:CheckBoxList runat="server" BorderColor="Black" BorderWidth="1" BorderStyle="Solid" Width="200px" ForeColor="Black"/>
+<asp:DropDownList Runat="server" Width="300px" />
+<asp:TreeView runat="server" ShowLines="true" NodeStyle-ImageUrl="~/Images/Folder.GIF"/>
+<asp:Panel  runat="server" ScrollBars="Auto" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" />
+
+<asp:ImageButton runat="server" ImageUrl="~/Images/logout.png" SkinId="logoutButton" Width="20px" height="20px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/home.png" SkinId="HomeButton" Width="20px" height="20px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/dashboard_blue.png" SkinId="DashBoardButton" Width="20px" height="20px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/change_password.png" SkinId="ChangePasswordButton" Width="20px" height="20px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/cancel.jpg" SkinId="CancelButton"  Width="100px"  />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/submit.jpg" SkinId="SubmitButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/addnew.jpg" SkinId="AddNewButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/approve.jpg" SkinId="ApproveButton" Width="75px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/back.jpg" SkinId="BackButton" Width="75px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/delete.jpg" SkinId="DeleteButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/edit.jpg" SkinId="EditButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/export.jpg" SkinId="ExportButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/field.jpg" SkinId="FieldButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/first.jpg" SkinId="FirstButton" Width="75px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/last.jpg" SkinId="LastButton" Width="75px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/list.jpg" SkinId="ListButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/login.jpg" SkinId="LoginButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/next.jpg" SkinId="NextButton" Width="75px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/permission.jpg" SkinId="PermissionButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/previous.jpg" SkinId="PreviousButton" Width="75px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/reject.jpg" SkinId="RejectButton" Width="75px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/full-screen.jpg" SkinId="FullScreenButton" Width="75px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/save.jpg" SkinId="SaveButton" Width="75px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/view.jpg" SkinId="ViewButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/add.jpg" SkinId="AddButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/upload.jpg" SkinId="UploadButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/update.jpg" SkinId="UpdateButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/Calendar_scheduleHS.png" SkinId="CalenderButton" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/show.jpg" SkinId="showbutton"  Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/Add-remarks.jpg" SkinId="AddRemarks" width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/download.jpg" SkinId="Download" width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/SearchFolder.jpg" SkinId="SearchFolder" width="75px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/dwnload-file.jpg" SkinId="DownloadButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/yes.jpg" SkinId="YesButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/no.jpg" SkinId="NoButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/Move.jpg" SkinId="MoveButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/share.png" SkinId="ShareButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/AddtoCart.png" SkinId="cartButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/Merge.jpg" SkinId="MergeButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/Split.jpg" SkinId="SplitButton" Width="100px" />
+<asp:ImageButton runat="server" ImageUrl="~/Images/DMSButton/Restore.png" SkinId="RestoreButton" Width="100px" />

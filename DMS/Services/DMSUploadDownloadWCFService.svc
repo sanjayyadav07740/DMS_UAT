@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="DMS.Services.DMSUploadDownloadWCFService" CodeBehind="DMSUploadDownloadWCFService.svc.cs" %>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.100.17.44/Flo.Engine/Service.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Flo.Workbench.Domain.Model" />
+  <xs:element name="Initialize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WorkspaceID" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Flo.Workbench.Domain.Model" minOccurs="0" name="Record" nillable="true" type="q1:Record" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitializeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InitializeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateHumanTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WorkspaceID" type="xs:int" />
+        <xs:element minOccurs="0" name="TaskID" type="xs:int" />
+        <xs:element minOccurs="0" name="IsApproved" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateHumanTaskResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

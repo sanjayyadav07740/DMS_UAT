@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Flo.Workbench.Domain.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Flo.Workbench.Domain.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.100.17.44/Flo.Engine/Service.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://10.100.17.44/Flo.Engine/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="Record">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HumanTasks" nillable="true" type="tns:ArrayOfHumanTask" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Status" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkflowInstanceID" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Workspace" nillable="true" type="tns:Workspace" />
+          <xs:element minOccurs="0" name="WorkspaceID" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkspaceReference" nillable="true" type="q1:EntityReferenceOfWorkspacejXANO_P5n" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Record" nillable="true" type="tns:Record" />
+  <xs:complexType name="ArrayOfHumanTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HumanTask" nillable="true" type="tns:HumanTask" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHumanTask" nillable="true" type="tns:ArrayOfHumanTask" />
+  <xs:complexType name="HumanTask">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bookmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CompletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CompletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Escalated" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notifications" nillable="true" type="tns:ArrayOfNotification" />
+          <xs:element minOccurs="0" name="PotentialOwners" nillable="true" type="tns:ArrayOfPotentialOwner" />
+          <xs:element minOccurs="0" name="Priority" type="xs:int" />
+          <xs:element minOccurs="0" name="Record" nillable="true" type="tns:Record" />
+          <xs:element minOccurs="0" name="RecordID" type="xs:int" />
+          <xs:element minOccurs="0" name="RecordReference" nillable="true" type="q2:EntityReferenceOfRecordjXANO_P5n" />
+          <xs:element minOccurs="0" name="ReservedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ReservedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StatusIdentifier" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaskReply" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaskRequest" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaskTypeIdentifier" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserCompleted" nillable="true" type="tns:User" />
+          <xs:element minOccurs="0" name="UserCompletedReference" nillable="true" type="q2:EntityReferenceOfUserjXANO_P5n" />
+          <xs:element minOccurs="0" name="UserReserved" nillable="true" type="tns:User" />
+          <xs:element minOccurs="0" name="UserReservedReference" nillable="true" type="q2:EntityReferenceOfUserjXANO_P5n" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HumanTask" nillable="true" type="tns:HumanTask" />
+  <xs:complexType name="ArrayOfNotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Notification" nillable="true" type="tns:Notification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNotification" nillable="true" type="tns:ArrayOfNotification" />
+  <xs:complexType name="Notification">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HumanTask" nillable="true" type="tns:HumanTask" />
+          <xs:element minOccurs="0" name="HumanTaskID" type="xs:int" />
+          <xs:element minOccurs="0" name="HumanTaskReference" nillable="true" type="q3:EntityReferenceOfHumanTaskjXANO_P5n" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Processed" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Notification" nillable="true" type="tns:Notification" />
+  <xs:complexType name="ArrayOfPotentialOwner">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PotentialOwner" nillable="true" type="tns:PotentialOwner" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPotentialOwner" nillable="true" type="tns:ArrayOfPotentialOwner" />
+  <xs:complexType name="PotentialOwner">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HumanTask" nillable="true" type="tns:HumanTask" />
+          <xs:element minOccurs="0" name="HumanTaskID" type="xs:int" />
+          <xs:element minOccurs="0" name="HumanTaskReference" nillable="true" type="q4:EntityReferenceOfHumanTaskjXANO_P5n" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserReference" nillable="true" type="q4:EntityReferenceOfUserjXANO_P5n" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PotentialOwner" nillable="true" type="tns:PotentialOwner" />
+  <xs:complexType name="User">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspNetUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HumanTasksCompleted" nillable="true" type="tns:ArrayOfHumanTask" />
+          <xs:element minOccurs="0" name="HumanTasksReserved" nillable="true" type="tns:ArrayOfHumanTask" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PotentialOwners" nillable="true" type="tns:ArrayOfPotentialOwner" />
+          <xs:element minOccurs="0" name="WorkspacesCreated" nillable="true" type="tns:ArrayOfWorkspace" />
+          <xs:element minOccurs="0" name="WorkspacesModified" nillable="true" type="tns:ArrayOfWorkspace" />
+          <xs:element minOccurs="0" name="WorkspacesOwned" nillable="true" type="tns:ArrayOfWorkspace" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfWorkspace">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Workspace" nillable="true" type="tns:Workspace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkspace" nillable="true" type="tns:ArrayOfWorkspace" />
+  <xs:complexType name="Workspace">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailAccount" nillable="true" type="tns:EmailAccount" />
+          <xs:element minOccurs="0" name="EmailAccountReference" nillable="true" type="q6:EntityReferenceOfEmailAccountjXANO_P5n" />
+          <xs:element minOccurs="0" name="EmailBodyTemplate" nillable="true" type="tns:EmailBodyTemplate" />
+          <xs:element minOccurs="0" name="EmailBodyTemplateReference" nillable="true" type="q6:EntityReferenceOfEmailBodyTemplatejXANO_P5n" />
+          <xs:element minOccurs="0" name="EmailNotificationAccount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EmailNotificationTemplate" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Owner" type="xs:int" />
+          <xs:element minOccurs="0" name="RecordType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Records" nillable="true" type="tns:ArrayOfRecord" />
+          <xs:element minOccurs="0" name="SMSAccount" nillable="true" type="tns:SMSAccount" />
+          <xs:element minOccurs="0" name="SMSAccountReference" nillable="true" type="q6:EntityReferenceOfSMSAccountjXANO_P5n" />
+          <xs:element minOccurs="0" name="SMSBodyTemplate" nillable="true" type="tns:SMSBodyTemplate" />
+          <xs:element minOccurs="0" name="SMSBodyTemplateReference" nillable="true" type="q6:EntityReferenceOfSMSBodyTemplatejXANO_P5n" />
+          <xs:element minOccurs="0" name="SMSNotificationAccount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SMSNotificationTemplate" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SendEmailNotification" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SendSMSNotification" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserCreator" nillable="true" type="tns:User" />
+          <xs:element minOccurs="0" name="UserCreatorReference" nillable="true" type="q6:EntityReferenceOfUserjXANO_P5n" />
+          <xs:element minOccurs="0" name="UserModifier" nillable="true" type="tns:User" />
+          <xs:element minOccurs="0" name="UserModifierReference" nillable="true" type="q6:EntityReferenceOfUserjXANO_P5n" />
+          <xs:element minOccurs="0" name="UserOwner" nillable="true" type="tns:User" />
+          <xs:element minOccurs="0" name="UserOwnerReference" nillable="true" type="q6:EntityReferenceOfUserjXANO_P5n" />
+          <xs:element minOccurs="0" name="WorkspaceWorkflows" nillable="true" type="tns:ArrayOfWorkspaceWorkflow" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Workspace" nillable="true" type="tns:Workspace" />
+  <xs:complexType name="EmailAccount">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EnableSsl" type="xs:boolean" />
+          <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Port" type="xs:int" />
+          <xs:element minOccurs="0" name="Server" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Workspaces" nillable="true" type="tns:ArrayOfWorkspace" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmailAccount" nillable="true" type="tns:EmailAccount" />
+  <xs:complexType name="EmailBodyTemplate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailTemplate" nillable="true" type="tns:EmailTemplate" />
+          <xs:element minOccurs="0" name="EmailTemplateID" type="xs:int" />
+          <xs:element minOccurs="0" name="EmailTemplateReference" nillable="true" type="q8:EntityReferenceOfEmailTemplatejXANO_P5n" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Workspaces" nillable="true" type="tns:ArrayOfWorkspace" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmailBodyTemplate" nillable="true" type="tns:EmailBodyTemplate" />
+  <xs:complexType name="EmailTemplate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q9:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailBodyTemplates" nillable="true" type="tns:ArrayOfEmailBodyTemplate" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmailTemplate" nillable="true" type="tns:EmailTemplate" />
+  <xs:complexType name="ArrayOfEmailBodyTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmailBodyTemplate" nillable="true" type="tns:EmailBodyTemplate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmailBodyTemplate" nillable="true" type="tns:ArrayOfEmailBodyTemplate" />
+  <xs:complexType name="ArrayOfRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Record" nillable="true" type="tns:Record" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecord" nillable="true" type="tns:ArrayOfRecord" />
+  <xs:complexType name="SMSAccount">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q10:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Workspaces" nillable="true" type="tns:ArrayOfWorkspace" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SMSAccount" nillable="true" type="tns:SMSAccount" />
+  <xs:complexType name="SMSBodyTemplate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q11:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SMSTemplate" nillable="true" type="tns:SMSTemplate" />
+          <xs:element minOccurs="0" name="SMSTemplateID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SMSTemplateReference" nillable="true" type="q11:EntityReferenceOfSMSTemplatejXANO_P5n" />
+          <xs:element minOccurs="0" name="Workspaces" nillable="true" type="tns:ArrayOfWorkspace" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SMSBodyTemplate" nillable="true" type="tns:SMSBodyTemplate" />
+  <xs:complexType name="SMSTemplate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q12:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SMSBodyTemplates" nillable="true" type="tns:ArrayOfSMSBodyTemplate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SMSTemplate" nillable="true" type="tns:SMSTemplate" />
+  <xs:complexType name="ArrayOfSMSBodyTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SMSBodyTemplate" nillable="true" type="tns:SMSBodyTemplate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSMSBodyTemplate" nillable="true" type="tns:ArrayOfSMSBodyTemplate" />
+  <xs:complexType name="ArrayOfWorkspaceWorkflow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkspaceWorkflow" nillable="true" type="tns:WorkspaceWorkflow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkspaceWorkflow" nillable="true" type="tns:ArrayOfWorkspaceWorkflow" />
+  <xs:complexType name="WorkspaceWorkflow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q13:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Workflow" nillable="true" type="tns:Workflow" />
+          <xs:element minOccurs="0" name="WorkflowID" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkflowReference" nillable="true" type="q13:EntityReferenceOfWorkflowjXANO_P5n" />
+          <xs:element minOccurs="0" name="Workspace" nillable="true" type="tns:Workspace" />
+          <xs:element minOccurs="0" name="WorkspaceID" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkspaceReference" nillable="true" type="q13:EntityReferenceOfWorkspacejXANO_P5n" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkspaceWorkflow" nillable="true" type="tns:WorkspaceWorkflow" />
+  <xs:complexType name="Workflow">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q14:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkspaceWorkflows" nillable="true" type="tns:ArrayOfWorkspaceWorkflow" />
+          <xs:element minOccurs="0" name="XamlDefinition" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Workflow" nillable="true" type="tns:Workflow" />
+  <xs:complexType name="Document">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Record">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Document" nillable="true" type="tns:Document" />
+</xs:schema>

@@ -1,0 +1,517 @@
+/* CSS Document */
+
+body { padding:0; margin:0;
+background-image:url(../images/bg.jpg);
+background-repeat:repeat-x;
+background-position:left top;
+}
+
+h3 {
+	padding:0;
+	margin:0;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	color:#000000;
+}
+
+.Header-bg {
+	width:1003px;
+	height:149px;
+	background-image:url(../images/Header-Bg.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+}
+
+.logo {
+
+padding-right:143px;
+text-align:right;
+}
+
+
+.login-container {
+	width:253px;
+	height:88px;
+	background-image:url(../images/login-container.jpg);
+	background-repeat:no-repeat;
+	background-position:left top;
+	padding-left:30px;
+}
+
+.login-icon {
+	border-right:1px solid #ffffff;
+	padding-right:5px;
+}
+
+.login-text {
+	font-family:Arial;
+	font-size:12px;
+	color:#FFFFFF;	
+}
+
+.middle-content {
+	width:963px;
+	background-color:#FFFFFF;
+	
+	
+
+}
+
+.middle-content-leftSHadow {
+	background-image:url(../images/middleCont-left-Shadow.jpg);
+	background-repeat:no-repeat;
+	background-position:right top;
+}
+.middle-content-rightSHadow {
+	background-image:url(../images/middleCont-right-Shadow.jpg);
+	background-repeat:no-repeat;
+	background-position:left top;
+}
+
+
+.menu-left-curve {
+	background-image:url(../images/menu-left-curve.jpg);
+	background-repeat:no-repeat;
+	background-position:right top;
+	width:23px;
+	height:45px;
+}
+
+.menu-bg {
+	background-image:url(../images/menu-Bg.jpg);
+	background-repeat:repeat-x;
+	width:917px;
+	height:45px;
+
+}
+
+.menu-right-curve {
+	background-image:url(../images/menu-right-curve.jpg);
+	background-repeat:no-repeat;
+	background-position:left top;
+	width:23px;
+	height:45px;
+}
+
+.menu-divider {
+	background-image:url(../images/menu-divider.jpg);
+	background-repeat:no-repeat;
+	background-position:left top;
+	width:10px;
+	height:43px;
+}
+
+
+
+.menu-item-text {
+	padding-left:18px;
+	padding-right:18px;
+	font-family:Arial;
+	font-size:13px;
+	color:#FFFFFF;	
+	font-weight:bold;
+	display:block;
+	height:45px;
+}
+.menu-item-text A {
+	color:#FFFFFF;	
+	text-decoration:none;
+	display:block;
+	height:30px;
+	padding-top:15px;
+	}
+.menu-item-text A:hover {
+	color:#FFFFFF;	
+	text-decoration:underline;
+	background-image:url(../images/menu-select.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	display:block;
+	height:30px;
+	padding-top:15px;
+	}
+
+
+.menu-item-text .select {
+	font-family:Arial;
+	font-size:13px;
+	color:#FFFFFF;	
+	font-weight:bold;
+	display:block;
+	height:30px;
+	padding-top:15px;
+	background-image:url(../images/menu-select.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+}
+
+.middle-white-container {
+	background-image:url(../images/white-shadow.jpg);
+	background-repeat:no-repeat;
+	background-position:left top;
+	
+	width:931px;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+.hor-dotted-divider {
+	background-image:url(../images/dotted-divider-bg.gif);
+	background-repeat:repeat-x;
+	background-position:left top;
+	height:23px;
+}
+
+.ver-dotted-divider {
+	background-image:url(../images/vertical-dotted.gif);
+	background-repeat:repeat-y;
+	background-position:center top;
+	width:8px;
+}
+
+
+
+.footer {
+	background-image:url(../images/footer-Bg.jpg);
+	background-repeat:repeat-x;
+	background-position:left top;
+	height:57px;
+	font-family:arial;
+	font-size:12px;
+	color:#3E3E3E;
+	font-weight:normal;
+	text-align:center;
+}
+
+
+
+.small-container {
+	width:289px;
+	background-image:url(../images/home-container-bottom.jpg);
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	padding-left:10px;
+	padding-right:11px;
+}
+
+.home-text {
+	font-family:arial;
+	font-size:12px;
+	font-weight:normal;
+	color:#000000;
+	padding:10px;
+	padding-top:0px;
+	text-align:left;
+	line-height:16px;
+}
+
+.more-link {
+	padding-right:15px;
+}
+
+
+
+
+.login-container-head {
+	background-image:url(../images/curve-1-top.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	color:#1F3F90;
+	width:325px;
+	height:35px;
+	padding-left:16px;
+	}
+	
+	
+	.login-container-bg {
+	background-image:url(../images/curve-1-bottom.jpg);
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	width:321px;
+	padding:0px 10px 10px 10px;
+	}
+
+/*--------change Password-----------------------*/
+
+.cp-container-head {
+	background-image:url(../images/curve-2-top.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	color:#1F3F90;
+	width:425px;
+	height:35px;
+	padding-left:16px;
+	}
+	
+	
+	.cp-container-bg {
+	background-image:url(../images/curve-2.gif);
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	width:421px;
+	padding:0px 10px 10px 10px;
+	}
+	
+	.blueText13 {
+	font-family:arial;
+	font-size:13px;
+	color:#1F3F90;
+	}
+	
+	.SearchTextBox {
+	font-family:arial;
+	font-size:13px;
+	color:#1F3F90;
+	width:220px;
+	}
+	
+h1 {
+		font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	color:#1F3F90;
+	padding:0px;
+	margin:0px;
+}	
+
+	
+		.textBox {
+	font-family:arial;
+	font-size:13px;
+	color:#1F3F90;
+	border:1px solid #1F3F90;
+	background-color:#FFFFFF;
+	}
+	
+	.button{
+	background-image:url(../images/Button-Bg.jpg);
+	background-repeat:repeat-x;
+	background-position:center bottom;
+	height:32px;
+	border:1px solid #153269;
+	font-family:arial;
+	font-size:13px;
+	color:#FFFFFF;
+	font-weight:bold;
+	cursor:pointer;
+
+	}
+	
+	
+	fieldset {
+	border:1px solid #153269;
+	padding:10px;
+		font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	color:#FFFFFF;
+
+	}
+	
+	
+	
+	
+	.UL-container-head {
+	background-image:url(../images/curve-3-top.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	color:#1F3F90;
+	width:930px;
+	height:58px;
+	padding-left:16px;
+	}
+	
+	.UL-container-head-2 {
+	background-image:url(../images/curve-3-bottom.jpg);
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	color:#1F3F90;
+	width:930px;
+	height:58px;
+	padding-left:16px;
+	}		
+
+	
+	
+	
+	
+	
+		.UL-containerContent {
+	font-family:arial;
+	font-size:12px;
+	font-weight:normal;
+	color:#1F3F90;
+	width:900px;
+	height:58px;
+	padding-left:16px;
+	padding-right:16px;
+	}
+
+	
+			.UL-containerContent span {
+	font-family:arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#ff0000;
+
+	}
+
+
+
+.ListBox {
+	font-family:arial;
+	font-size:12px;
+	font-weight:normal;
+	color:#000000;
+	height:auto;
+	width:150px;
+}
+
+.textBox {
+	font-family:arial;
+	font-size:14px;
+	font-weight:normal;
+	color:#000000;
+	height:auto;
+	width:150px;
+}
+
+/*----PAN textbox-----*/
+.pantextBox {
+	font-family:arial;
+	font-size:14px;
+	font-weight:normal;
+	color:#000000;
+	height:auto;
+	width:150px;
+	/*text-transform:uppercase;*/
+	
+}
+
+
+
+.grid {
+	border-left:1px solid #203F91;
+	border-top:1px solid #203F91;
+}
+.grid th {
+	border-right:1px solid #203F91;
+	border-bottom:1px solid #203F91;
+	font-family:arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#203F91;
+	padding:5px;
+	text-align:center;
+	
+}
+
+.grid td {
+	border-right:1px solid #203F91;
+	border-bottom:1px solid #203F91;
+	font-family:arial;
+	font-size:12px;
+	font-weight:normal;
+	color:#000000;
+	padding:5px 15px 5px 5px;
+	
+}
+
+
+
+
+
+.grid_b {
+	border:none;
+}
+.grid_b th {
+	font-family:arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#203F91;
+	padding:5px;
+	text-align:center;
+	
+}
+
+.grid_b td {
+	font-family:arial;
+	font-size:12px;
+	font-weight:normal;
+	color:#000000;
+	padding:7px 15px 7px 5px;
+	
+}
+			.grid_b td span {
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	color:#ff0000;
+
+	}
+	
+/* Virtual keyboard css*/
+.splkeys_bkspc 
+{
+width:94px;
+height:20px;
+ border:1px solid #757575; 
+ font-family:Arial,Helvetica,sans-serif; 
+ font-size:12px;
+ background-color:#edf2f3;
+ color:#b82f37; 
+}
+
+.splkeys_clr 
+{
+width:44px;
+height:20px;
+ border:1px solid #757575; 
+ font-family:Arial,Helvetica,sans-serif; 
+ font-size:12px;
+ background-color:#edf2f3;
+ color:#b82f37; 
+}
+
+.splkeys_cpslk 
+{
+width:94px;
+height:20px;
+ border:1px solid #757575; 
+ font-family:Arial,Helvetica,sans-serif; 
+ font-size:12px;
+ background-color:#edf2f3;
+ color:#b82f37; 
+}
+
+.keys 
+{
+ width:20px;
+ height:20px;
+ border:1px solid #757575; 
+ font-family:Arial,Helvetica,sans-serif; 
+ font-size:12px;
+ background-color:#edf2f3;
+ color:#b82f37; 
+}
+
+.loginError {
+	font-family:arial;
+	font-size:13px;
+	color:Red;
+	}

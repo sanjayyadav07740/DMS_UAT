@@ -1,0 +1,144 @@
+
+.vardana11bluebold {	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.bluevardanabold {	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.bluevardanabold A {	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.bluevardanabold A:hover {	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;}
+.verdanatwelveblue {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #014783; LINE-HEIGHT: 22px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.redboldverdananormal {	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #a51642; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.redboldverdana10 {	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #a51642; LINE-HEIGHT: 18px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.redboldverdana10 A {	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #a51642; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: underline;}
+.redboldverdana10 A:hover {	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.vardana10bluebold {	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.vardana10bluebold A {	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: underline;}
+.vardana10bluebold A:hover {	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.vardana11blue {	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.bluevardana11 {	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.bluevardana11center {	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: none;}
+.bluevardanaeleven {	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #014783; LINE-HEIGHT: 16px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.blueboldvardana {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.blueboldvardanabg {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana; TEXT-ALIGN: left;}
+.blueboldvardanabgTitle {	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #000000; FONT-FAMILY: Verdana; TEXT-ALIGN: center;}
+.Greenboldvardanabg {	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #47B749; FONT-FAMILY: Verdana; TEXT-ALIGN: left;}
+.blueboldvardana A {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.blueboldvardana A:hover {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: underline;}
+.contactbg {	BORDER-RIGHT: #d7d7d7 2px solid; BORDER-LEFT: #d7d7d7 2px solid; BACKGROUND-COLOR: #ffffff;}
+.contxtbox {	FONT-SIZE: 12px; WIDTH: 224px; COLOR: #08205c; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 12px;}
+.cattxtbox {	FONT-SIZE: 12px; WIDTH: 44px; COLOR: #08205c; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 12px;}
+.contxtarea {	FONT-SIZE: 12px; WIDTH: 574px; COLOR: #08205c; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 44px;}
+.contxtarea2 {	FONT-SIZE: 12px; WIDTH: 190px; COLOR: #08205c; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 44px;}
+.conselect {	FONT-SIZE: 12px; WIDTH: 196px; COLOR: #08205c; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 42px;}
+.tablestyle {	BORDER-RIGHT: #1f73b3 1px solid; BORDER-TOP: #1f73b3 1px solid; BORDER-LEFT: #1f73b3 1px solid; BORDER-BOTTOM: #1f73b3 1px solid; BACKGROUND-COLOR: #ffffff;}
+.logintxtbox {	FONT-SIZE: 12px; WIDTH: 196px; COLOR: #08205c; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 20px;}
+.tabborderhead {	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-LEFT: #ffffff 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #ffffff 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #29467e; TEXT-DECORATION: none;}
+.tabborder {	BORDER-RIGHT: #29467e 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #29467e 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 12px; BORDER-LEFT: #29467e 1px solid; COLOR: #333333; BORDER-BOTTOM: #29467e 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none;}
+.cmsblack12bold {	PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.cmsblack12bold1 {	PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 10px;  COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.cmsblack12bold A {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.cmsblack12bold A:hover {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;}
+.cmsblack10 {	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.cmswhite10 {	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.imgborder {	border:1px solid #666666;	}
+.cmsblack11 {	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.cmsselectbox1 {FONT-SIZE: 12px; WIDTH: 72px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 18px;}
+.cmsselectboxold {FONT-SIZE: 12px; WIDTH: 72px; COLOR: #000000; FONT-FAMILY: Verdana; HEIGHT: 18px;}
+.cmsselectboxnew {FONT-SIZE: 12px; WIDTH: 72px; COLOR: #000000; FONT-FAMILY: Verdana;}
+.cmstextbox1 {FONT-SIZE: 12px; WIDTH: 102px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 13px;}
+.menubackground {BACKGROUND-IMAGE: url(../images/menu_bg1.jpg); VERTICAL-ALIGN: middle; BACKGROUND-REPEAT: repeat-x; HEIGHT: 38px;}
+.mainbackground {BACKGROUND-IMAGE: url(../images/bgimage_main1.jpg); VERTICAL-ALIGN: middle; BACKGROUND-REPEAT: repeat; HEIGHT: auto;}
+.toplinebg {BACKGROUND-IMAGE: url(../images/toplineborder.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 11px;}
+.footerbackground {FONT-WEIGHT: normal; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(../images/menu_bg1.jpg); VERTICAL-ALIGN: middle; COLOR: #ffffff; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 38px; TEXT-ALIGN: center; TEXT-DECORATION: none;}
+.valuebasebg {BACKGROUND-IMAGE: url(../images/valuebased_bg.jpg); BACKGROUND-REPEAT: no-repeat; HEIGHT: 170px;}
+.smalltabbg {BACKGROUND-IMAGE: url(../images/table3_divider.gif); BACKGROUND-REPEAT: repeat-y;}
+.newsletterbg {BACKGROUND-IMAGE: url(../images/newsletter_bg.jpg); BACKGROUND-REPEAT: repeat-x;}
+.bigtabbg {BACKGROUND-IMAGE: url(../images/table2_bg.jpg); BACKGROUND-REPEAT:repeat; }
+.dottedlinebg {	BACKGROUND-IMAGE: url(../images/dottedlinebg.gif); BACKGROUND-REPEAT: repeat-x;}
+.vertdottedlinebg {	BACKGROUND-IMAGE: url(../images/vertdottedlinebg.gif); BACKGROUND-REPEAT: repeat-y;}
+.login-container-head {background-image:url(../images/curve-1-top.jpg); background-repeat:no-repeat; background-position:center top; font-family:arial; font-size:18px; font-weight:bold; color:#1F3F90; width:325px; height:35px; padding-left:16px;}
+.virtual-keyboard{background-image:url(../images/virtualkey-bg.jpg);background-repeat:no-repeat;width:486px; height:287px;}
+.login-container-bg {background-image:url(../images/curve-1-bottom.jpg); background-repeat:no-repeat; background-position:center bottom; width:321px; padding:0px 10px 10px 10px;}
+@media Print {BODY {}}
+@media Screen {BODY {}}
+.cmstext {	PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.greenDot{	BACKGROUND-IMAGE: url(../images/toplineborder.gif);}
+.BGDot{	background-image:url(../images/dottedlinebg.gif);	}
+	.buttonnew	{	  BORDER-RIGHT: black  1px solid; BORDER-TOP: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid; color: #D4D0C8; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; width:50px; border:black; height:17px; }
+	.tblitem {	BORDER-RIGHT: #7f9db9 1px solid;  BORDER-TOP: #7f9db9 1px solid;   BORDER-LEFT: #7f9db9 1px solid;  COLOR: #014783; BORDER-BOTTOM: #7f9db9 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;  background-color:#ffffff;}
+.MenuBack{	BACKGROUND-IMAGE: url(../images/menu_bg1.jpg); VERTICAL-ALIGN: middle; HEIGHT: 38px;}
+@media Print{BODY {}}
+@media Screen{BODY {}}
+.faqcode{FONT-WEIGHT: normal; padding-left:20px;  FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 21px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.cssText{	font-size:small;}
+.boxborder {	border:1px solid #B5D4EC;	padding:10px 10px 10px 10px;	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;	font-weight:bold;	color:#003366;}
+.novelboxborder {	border:1px solid #B5D4EC;	padding:5px 5px 5px 5px;	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;	font-weight:bold;	color:#003366;}
+	
+.MenuPadding{padding-top:100px;}	
+.Menu{background-image:url(../Images/menu_bg1.jpg); background-repeat: repeat; height:0px;} 
+ .menuhover{ color:#fff;background:transparent url(images/blueslate_backgroundOVER.gif) no-repeat top center; }
+ 
+ .middle_container
+{
+	float:left;
+	width:100%;
+	height:auto;
+	margin-top:0px;
+	margin-bottom:10px;
+	background-color:#ECECEC;
+}
+.gridrow { border:1px solid #CDCDCD; color:#3D3D3D; font-size:14px; font-weight:normal; vertical-align:middle; text-align:left; margin:0;height:30px;}
+.gridheader {background-color:#F0F0F6; border:1px solid #969a8b; font-size:14px; font-weight:normal; vertical-align:middle; text-align:left; margin:0;height:30px;}
+.gridfooter {background-color:#F0F0F6; border:1px solid #969a8b; font-size:14px; font-weight:normal; vertical-align:middle; text-align:center; margin:0;height:30px;}
+
+
+.staticmenu
+{
+    border-bottom:0px solid #7CCA27;
+    border-top:0px solid #7CCA27;
+    border-left:1px solid #7CCA27;
+    border-right:1px solid #7CCA27;
+ 
+}
+.cp-container-head {
+	background-image:url(../images/DMS_dasboard-greyhead.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:bold;
+	color:#1F3F90;
+	width:404px;
+	height:35px;
+	padding-left:25px;
+	}
+	
+	.cp-container-bg {
+	background-image:url(../images/DMS_dasboard-greybg.jpg);
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	width:404px;
+	height:181px;
+	padding:10px 10px 0px 10px;
+	}
+    .page_enabled, .page_disabled
+        {
+            display: inline-block;
+            height: 25px;
+            min-width: 25px;
+            line-height: 25px;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid #ccc;
+        }
+        .page_enabled
+        {
+            background-color: #eee;
+            color: #000;
+        }
+        .page_disabled
+        {
+            background-color: #6C6C6C;
+            color: #fff !important;
+        }
+
+

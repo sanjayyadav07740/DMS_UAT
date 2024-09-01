@@ -1,0 +1,32 @@
+﻿body {
+}
+
+TD
+{
+	font-family:Calibri,Verdana;
+	font-size:12px;
+}
+TABLE
+{
+	font-family: Verdana, Calibri;
+}
+
+.btn
+{
+	color: white; border-top-style: inset; font-family: Verdana; border-right-style: inset; border-left-style: inset; background-color: #868282; border-bottom-style: inset
+}
+Input
+{
+	font-family:Calibri,Verdana;
+	font-size:12px;
+}
+textarea
+{
+	font-family:Calibri,Verdana;
+	font-size:13px;
+}
+select
+{
+	font-family:Calibri,Verdana;
+	font-size:13px;
+}

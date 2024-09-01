@@ -1,0 +1,2056 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Upload_x0020_File_x0020_To_x0020_Server">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objFileByte" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="boolIsNew" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="intContentLength" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_x0020_File_x0020_To_x0020_ServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Upload_x0020_File_x0020_To_x0020_ServerResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MetadataID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDocumentFromServer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDocumentFromServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDocumentFromServerResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_x0020_Document">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Docname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageCount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="RepId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_x0020_DocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Check_x0020_DocumentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_x0020_DocumentCentrum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Docname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RepId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MetId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CatId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FolId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_x0020_DocumentCentrumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Check_x0020_DocumentCentrumResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_x0020_Folder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FolderName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MetatemplateID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ParentFolderID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_x0020_FolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_x0020_FolderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_x0020_Folder_x0020_Centrum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FolderName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MetatemplateID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ParentFolder" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_x0020_Folder_x0020_CentrumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_x0020_Folder_x0020_CentrumResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_x0020_Pagecount_x0020_of_x0020_image">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="imageFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_x0020_Pagecount_x0020_of_x0020_imageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Get_x0020_Pagecount_x0020_of_x0020_imageResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objDocument" type="tns:Document" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Document">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MetaDataID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentGuid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Size" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentStatusID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tag" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsLucened" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OutPutValuues" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="showcount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SearchType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VersionNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OldPageCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MergedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MergedPageCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTPResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFileByte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="objDocument" type="tns:Document" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_DetailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_Centrum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFileByte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="objDocument" type="tns:Document" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_CentrumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_CentrumResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUniqueFileName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strExtension" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUniqueFileNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUniqueFileNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objMetaData" type="tns:MetaData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MetaData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MetaDataID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MetaDataCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RepositoryID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MetaTemplateID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FolderID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentStatusID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NewPageIndex" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertMetaDataResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objDocument" type="tns:Document" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertDocumentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_x0020_error_x0020_documents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_x0020_error_x0020_documentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="select_x0020_error_x0020_documentsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFolder" type="tns:Folder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Folder">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FolderID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FolderName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FolderDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MetaTemplateID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentFolderID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertFolderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFolderAxisTrustee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFolder" type="tns:Folder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFolderAxisTrusteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertFolderAxisTrusteeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFolderCentrum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFolder" type="tns:Folder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFolderCentrumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertFolderCentrumResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadRepository">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadRepositoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadRepositoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMetaTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intRepositoryID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMetaTemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMetaTemplateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intMetaTemplateID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCategoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intMetaTemplateID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCategoryID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFolderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFolderAxisTrustee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intMetaTemplateID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCategoryID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFolderAxisTrusteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFolderAxisTrusteeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMetaDataCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objMetaData" type="tns:MetaData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMetaDataCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMetaDataCodeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadDocumentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFolderIfNeeded">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFolderIfNeededResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFileByte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="objDocument" type="tns:Document" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_DetailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFileByte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="objDocument" type="tns:Document" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_DetailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFolderForOthers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFolder" type="tns:Folder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFolderForOthersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertFolderForOthersResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_x0020_Document_Reliance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Docname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RepId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MetId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CatId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_x0020_Document_RelianceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Check_x0020_Document_RelianceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limited">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Docname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RepId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MetId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Folderid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limitedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limitedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_x0020_IDBI_x0020_Bank_x0020_Ltd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Docname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MetId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="RepId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_x0020_IDBI_x0020_Bank_x0020_LtdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Check_x0020_IDBI_x0020_Bank_x0020_LtdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_Ahmedabad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MetatemplateName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_AhmedabadResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_x0020_docid_x0020_and_x0020_metadataid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RepId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_x0020_docid_x0020_and_x0020_metadataidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_x0020_docid_x0020_and_x0020_metadataidResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="excel_x0020_entry_x0020_IDBI_x0020_Ahmedabad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DocumentId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MetadataId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateOfRecievalAtRpu" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateOfAccOpening" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Custid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoxNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SHIL_Barcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SHCIL_Barcode_Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CloseFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcelName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="excel_x0020_entry_x0020_IDBI_x0020_AhmedabadResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DocId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_table">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DocumentId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MetadataId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateOfRecievalAtRpu" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateOfAccOpening" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Custid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoxNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SHIL_Barcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SHCIL_Barcode_Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CloseFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcelName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_tableResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_x0020_erroneous_x0020_docs_x0020_list">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_x0020_erroneous_x0020_docs_x0020_listResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_x0020_erroneous_x0020_docs_x0020_listResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_List">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_ListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_ListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_x0020_document_x0020_status">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objDocument" type="tns:Document" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_x0020_document_x0020_statusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="update_x0020_document_x0020_statusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Upload_x0020_File_x0020_To_x0020_ServerSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_File_x0020_To_x0020_Server" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_File_x0020_To_x0020_ServerSoapOut">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_File_x0020_To_x0020_ServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataIDSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataID" />
+  </wsdl:message>
+  <wsdl:message name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataIDSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDocumentFromServerSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadDocumentFromServer" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDocumentFromServerSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDocumentFromServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Check_x0020_DocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:Check_x0020_Document" />
+  </wsdl:message>
+  <wsdl:message name="Check_x0020_DocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:Check_x0020_DocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Check_x0020_DocumentCentrumSoapIn">
+    <wsdl:part name="parameters" element="tns:Check_x0020_DocumentCentrum" />
+  </wsdl:message>
+  <wsdl:message name="Check_x0020_DocumentCentrumSoapOut">
+    <wsdl:part name="parameters" element="tns:Check_x0020_DocumentCentrumResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_x0020_FolderSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_x0020_Folder" />
+  </wsdl:message>
+  <wsdl:message name="Select_x0020_FolderSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_x0020_FolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_x0020_Folder_x0020_CentrumSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_x0020_Folder_x0020_Centrum" />
+  </wsdl:message>
+  <wsdl:message name="Select_x0020_Folder_x0020_CentrumSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_x0020_Folder_x0020_CentrumResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_x0020_Pagecount_x0020_of_x0020_imageSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_x0020_Pagecount_x0020_of_x0020_image" />
+  </wsdl:message>
+  <wsdl:message name="Get_x0020_Pagecount_x0020_of_x0020_imageSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_x0020_Pagecount_x0020_of_x0020_imageResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTPSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTP" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTPSoapOut">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_CentrumSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_Centrum" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_CentrumSoapOut">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_CentrumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUniqueFileNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUniqueFileName" />
+  </wsdl:message>
+  <wsdl:message name="GetUniqueFileNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUniqueFileNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertMetaData" />
+  </wsdl:message>
+  <wsdl:message name="InsertMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDocument" />
+  </wsdl:message>
+  <wsdl:message name="InsertDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="select_x0020_error_x0020_documentsSoapIn">
+    <wsdl:part name="parameters" element="tns:select_x0020_error_x0020_documents" />
+  </wsdl:message>
+  <wsdl:message name="select_x0020_error_x0020_documentsSoapOut">
+    <wsdl:part name="parameters" element="tns:select_x0020_error_x0020_documentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertFolder" />
+  </wsdl:message>
+  <wsdl:message name="InsertFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertFolderAxisTrusteeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertFolderAxisTrustee" />
+  </wsdl:message>
+  <wsdl:message name="InsertFolderAxisTrusteeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertFolderAxisTrusteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertFolderCentrumSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertFolderCentrum" />
+  </wsdl:message>
+  <wsdl:message name="InsertFolderCentrumSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertFolderCentrumResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadRepositorySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadRepository" />
+  </wsdl:message>
+  <wsdl:message name="LoadRepositorySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadRepositoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMetaTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMetaTemplate" />
+  </wsdl:message>
+  <wsdl:message name="LoadMetaTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMetaTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCategory" />
+  </wsdl:message>
+  <wsdl:message name="LoadCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFolder" />
+  </wsdl:message>
+  <wsdl:message name="LoadFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFolderAxisTrusteeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFolderAxisTrustee" />
+  </wsdl:message>
+  <wsdl:message name="LoadFolderAxisTrusteeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFolderAxisTrusteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMetaDataCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMetaDataCode" />
+  </wsdl:message>
+  <wsdl:message name="LoadMetaDataCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMetaDataCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadDocument" />
+  </wsdl:message>
+  <wsdl:message name="LoadDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderIfNeededSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFolderIfNeeded" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderIfNeededSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFolderIfNeededResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_Detail" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_Detail" />
+  </wsdl:message>
+  <wsdl:message name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertFolderForOthersSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertFolderForOthers" />
+  </wsdl:message>
+  <wsdl:message name="InsertFolderForOthersSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertFolderForOthersResponse" />
+  </wsdl:message>
+  <wsdl:message name="Check_x0020_Document_RelianceSoapIn">
+    <wsdl:part name="parameters" element="tns:Check_x0020_Document_Reliance" />
+  </wsdl:message>
+  <wsdl:message name="Check_x0020_Document_RelianceSoapOut">
+    <wsdl:part name="parameters" element="tns:Check_x0020_Document_RelianceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limitedSoapIn">
+    <wsdl:part name="parameters" element="tns:Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limited" />
+  </wsdl:message>
+  <wsdl:message name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limitedSoapOut">
+    <wsdl:part name="parameters" element="tns:Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limitedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Check_x0020_IDBI_x0020_Bank_x0020_LtdSoapIn">
+    <wsdl:part name="parameters" element="tns:Check_x0020_IDBI_x0020_Bank_x0020_Ltd" />
+  </wsdl:message>
+  <wsdl:message name="Check_x0020_IDBI_x0020_Bank_x0020_LtdSoapOut">
+    <wsdl:part name="parameters" element="tns:Check_x0020_IDBI_x0020_Bank_x0020_LtdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_AhmedabadSoapIn">
+    <wsdl:part name="parameters" element="tns:CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_Ahmedabad" />
+  </wsdl:message>
+  <wsdl:message name="CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_AhmedabadSoapOut">
+    <wsdl:part name="parameters" element="tns:CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_AhmedabadResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_x0020_docid_x0020_and_x0020_metadataidSoapIn">
+    <wsdl:part name="parameters" element="tns:get_x0020_docid_x0020_and_x0020_metadataid" />
+  </wsdl:message>
+  <wsdl:message name="get_x0020_docid_x0020_and_x0020_metadataidSoapOut">
+    <wsdl:part name="parameters" element="tns:get_x0020_docid_x0020_and_x0020_metadataidResponse" />
+  </wsdl:message>
+  <wsdl:message name="excel_x0020_entry_x0020_IDBI_x0020_AhmedabadSoapIn">
+    <wsdl:part name="parameters" element="tns:excel_x0020_entry_x0020_IDBI_x0020_Ahmedabad" />
+  </wsdl:message>
+  <wsdl:message name="excel_x0020_entry_x0020_IDBI_x0020_AhmedabadSoapOut">
+    <wsdl:part name="parameters" element="tns:excel_x0020_entry_x0020_IDBI_x0020_AhmedabadResponse" />
+  </wsdl:message>
+  <wsdl:message name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentrySoapIn">
+    <wsdl:part name="parameters" element="tns:check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentry" />
+  </wsdl:message>
+  <wsdl:message name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentrySoapOut">
+    <wsdl:part name="parameters" element="tns:check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentryResponse" />
+  </wsdl:message>
+  <wsdl:message name="duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_tableSoapIn">
+    <wsdl:part name="parameters" element="tns:duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_table" />
+  </wsdl:message>
+  <wsdl:message name="duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_tableSoapOut">
+    <wsdl:part name="parameters" element="tns:duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_tableResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_x0020_erroneous_x0020_docs_x0020_listSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_x0020_erroneous_x0020_docs_x0020_list" />
+  </wsdl:message>
+  <wsdl:message name="Get_x0020_erroneous_x0020_docs_x0020_listSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_x0020_erroneous_x0020_docs_x0020_listResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_ListSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_List" />
+  </wsdl:message>
+  <wsdl:message name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_ListSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentrySoapIn">
+    <wsdl:part name="parameters" element="tns:check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentry" />
+  </wsdl:message>
+  <wsdl:message name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentrySoapOut">
+    <wsdl:part name="parameters" element="tns:check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentryResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_x0020_document_x0020_statusSoapIn">
+    <wsdl:part name="parameters" element="tns:update_x0020_document_x0020_status" />
+  </wsdl:message>
+  <wsdl:message name="update_x0020_document_x0020_statusSoapOut">
+    <wsdl:part name="parameters" element="tns:update_x0020_document_x0020_statusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DMSUploadDownloadWebServiceSoap">
+    <wsdl:operation name="UploadDocumentToServer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload File To Server</wsdl:documentation>
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server" message="tns:Upload_x0020_File_x0020_To_x0020_ServerSoapIn" />
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server" message="tns:Upload_x0020_File_x0020_To_x0020_ServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectRepName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Repository Name from MetadataID</wsdl:documentation>
+      <wsdl:input name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataID" message="tns:Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataIDSoapIn" />
+      <wsdl:output name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataID" message="tns:Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDocumentFromServer">
+      <wsdl:input message="tns:DownloadDocumentFromServerSoapIn" />
+      <wsdl:output message="tns:DownloadDocumentFromServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check Document</wsdl:documentation>
+      <wsdl:input name="Check_x0020_Document" message="tns:Check_x0020_DocumentSoapIn" />
+      <wsdl:output name="Check_x0020_Document" message="tns:Check_x0020_DocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocumentCentrum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check Document</wsdl:documentation>
+      <wsdl:input name="Check_x0020_DocumentCentrum" message="tns:Check_x0020_DocumentCentrumSoapIn" />
+      <wsdl:output name="Check_x0020_DocumentCentrum" message="tns:Check_x0020_DocumentCentrumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectFolderCentrum2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Select Folder</wsdl:documentation>
+      <wsdl:input name="Select_x0020_Folder" message="tns:Select_x0020_FolderSoapIn" />
+      <wsdl:output name="Select_x0020_Folder" message="tns:Select_x0020_FolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectFolderCentrum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Select Folder Centrum</wsdl:documentation>
+      <wsdl:input name="Select_x0020_Folder_x0020_Centrum" message="tns:Select_x0020_Folder_x0020_CentrumSoapIn" />
+      <wsdl:output name="Select_x0020_Folder_x0020_Centrum" message="tns:Select_x0020_Folder_x0020_CentrumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FrameCount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Pagecount of image</wsdl:documentation>
+      <wsdl:input name="Get_x0020_Pagecount_x0020_of_x0020_image" message="tns:Get_x0020_Pagecount_x0020_of_x0020_imageSoapIn" />
+      <wsdl:output name="Get_x0020_Pagecount_x0020_of_x0020_image" message="tns:Get_x0020_Pagecount_x0020_of_x0020_imageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServerSFTP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload File To Server With Detail using SFTP</wsdl:documentation>
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTP" message="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTPSoapIn" />
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTP" message="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload File To Server With Detail</wsdl:documentation>
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail" message="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_DetailSoapIn" />
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail" message="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServerCentrum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload File To Server With Detail</wsdl:documentation>
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_Centrum" message="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_CentrumSoapIn" />
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_Centrum" message="tns:Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_CentrumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUniqueFileName">
+      <wsdl:input message="tns:GetUniqueFileNameSoapIn" />
+      <wsdl:output message="tns:GetUniqueFileNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMetaData">
+      <wsdl:input message="tns:InsertMetaDataSoapIn" />
+      <wsdl:output message="tns:InsertMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocument">
+      <wsdl:input message="tns:InsertDocumentSoapIn" />
+      <wsdl:output message="tns:InsertDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectErrorDocs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">select error documents</wsdl:documentation>
+      <wsdl:input name="select_x0020_error_x0020_documents" message="tns:select_x0020_error_x0020_documentsSoapIn" />
+      <wsdl:output name="select_x0020_error_x0020_documents" message="tns:select_x0020_error_x0020_documentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolder">
+      <wsdl:input message="tns:InsertFolderSoapIn" />
+      <wsdl:output message="tns:InsertFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderAxisTrustee">
+      <wsdl:input message="tns:InsertFolderAxisTrusteeSoapIn" />
+      <wsdl:output message="tns:InsertFolderAxisTrusteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderCentrum">
+      <wsdl:input message="tns:InsertFolderCentrumSoapIn" />
+      <wsdl:output message="tns:InsertFolderCentrumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRepository">
+      <wsdl:input message="tns:LoadRepositorySoapIn" />
+      <wsdl:output message="tns:LoadRepositorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMetaTemplate">
+      <wsdl:input message="tns:LoadMetaTemplateSoapIn" />
+      <wsdl:output message="tns:LoadMetaTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCategory">
+      <wsdl:input message="tns:LoadCategorySoapIn" />
+      <wsdl:output message="tns:LoadCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFolder">
+      <wsdl:input message="tns:LoadFolderSoapIn" />
+      <wsdl:output message="tns:LoadFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFolderAxisTrustee">
+      <wsdl:input message="tns:LoadFolderAxisTrusteeSoapIn" />
+      <wsdl:output message="tns:LoadFolderAxisTrusteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMetaDataCode">
+      <wsdl:input message="tns:LoadMetaDataCodeSoapIn" />
+      <wsdl:output message="tns:LoadMetaDataCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDocument">
+      <wsdl:input message="tns:LoadDocumentSoapIn" />
+      <wsdl:output message="tns:LoadDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input message="tns:AuthenticateUserSoapIn" />
+      <wsdl:output message="tns:AuthenticateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolderIfNeeded">
+      <wsdl:input message="tns:CreateFolderIfNeededSoapIn" />
+      <wsdl:output message="tns:CreateFolderIfNeededSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServer_AxisTrustee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload File of AxisTrustee To Server With Detail</wsdl:documentation>
+      <wsdl:input name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_Detail" message="tns:Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_DetailSoapIn" />
+      <wsdl:output name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_Detail" message="tns:Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServer_FolderWise">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload Folders To Server With Detail</wsdl:documentation>
+      <wsdl:input name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_Detail" message="tns:Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_DetailSoapIn" />
+      <wsdl:output name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_Detail" message="tns:Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderForOthers">
+      <wsdl:input message="tns:InsertFolderForOthersSoapIn" />
+      <wsdl:output message="tns:InsertFolderForOthersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument_Reliance">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check Document_Reliance</wsdl:documentation>
+      <wsdl:input name="Check_x0020_Document_Reliance" message="tns:Check_x0020_Document_RelianceSoapIn" />
+      <wsdl:output name="Check_x0020_Document_Reliance" message="tns:Check_x0020_Document_RelianceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument_SBIMutual">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check Document_SBI Mutual Fund Trustee Company Private limited</wsdl:documentation>
+      <wsdl:input name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limited" message="tns:Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limitedSoapIn" />
+      <wsdl:output name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limited" message="tns:Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limitedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument_IDBI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check IDBI Bank Ltd</wsdl:documentation>
+      <wsdl:input name="Check_x0020_IDBI_x0020_Bank_x0020_Ltd" message="tns:Check_x0020_IDBI_x0020_Bank_x0020_LtdSoapIn" />
+      <wsdl:output name="Check_x0020_IDBI_x0020_Bank_x0020_Ltd" message="tns:Check_x0020_IDBI_x0020_Bank_x0020_LtdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ErrorDocument_IDBIAhm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CorruptFile or duplicate file catch entry IDBI Ahmedabad</wsdl:documentation>
+      <wsdl:input name="CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_Ahmedabad" message="tns:CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_AhmedabadSoapIn" />
+      <wsdl:output name="CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_Ahmedabad" message="tns:CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_AhmedabadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocumentID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get docid and metadataid</wsdl:documentation>
+      <wsdl:input name="get_x0020_docid_x0020_and_x0020_metadataid" message="tns:get_x0020_docid_x0020_and_x0020_metadataidSoapIn" />
+      <wsdl:output name="get_x0020_docid_x0020_and_x0020_metadataid" message="tns:get_x0020_docid_x0020_and_x0020_metadataidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcelEntry_IDBIAhm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">excel entry IDBI Ahmedabad</wsdl:documentation>
+      <wsdl:input name="excel_x0020_entry_x0020_IDBI_x0020_Ahmedabad" message="tns:excel_x0020_entry_x0020_IDBI_x0020_AhmedabadSoapIn" />
+      <wsdl:output name="excel_x0020_entry_x0020_IDBI_x0020_Ahmedabad" message="tns:excel_x0020_entry_x0020_IDBI_x0020_AhmedabadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocIdInExcel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">check if docid is already present in excelentry</wsdl:documentation>
+      <wsdl:input name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentry" message="tns:check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentrySoapIn" />
+      <wsdl:output name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentry" message="tns:check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInExcelEntry_Error_IDBI_Ahm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">duplicate docid insert in excelentry error table</wsdl:documentation>
+      <wsdl:input name="duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_table" message="tns:duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_tableSoapIn" />
+      <wsdl:output name="duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_table" message="tns:duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_tableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorDocs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get erroneous docs list</wsdl:documentation>
+      <wsdl:input name="Get_x0020_erroneous_x0020_docs_x0020_list" message="tns:Get_x0020_erroneous_x0020_docs_x0020_listSoapIn" />
+      <wsdl:output name="Get_x0020_erroneous_x0020_docs_x0020_list" message="tns:Get_x0020_erroneous_x0020_docs_x0020_listSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocEntryStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get missing Entry Docs List</wsdl:documentation>
+      <wsdl:input name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_List" message="tns:Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_ListSoapIn" />
+      <wsdl:output name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_List" message="tns:Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_ListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocNameInExcel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">check if docname is present in excelentry</wsdl:documentation>
+      <wsdl:input name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentry" message="tns:check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentrySoapIn" />
+      <wsdl:output name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentry" message="tns:check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentStatusId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update document status</wsdl:documentation>
+      <wsdl:input name="update_x0020_document_x0020_status" message="tns:update_x0020_document_x0020_statusSoapIn" />
+      <wsdl:output name="update_x0020_document_x0020_status" message="tns:update_x0020_document_x0020_statusSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DMSUploadDownloadWebServiceSoap" type="tns:DMSUploadDownloadWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadDocumentToServer">
+      <soap:operation soapAction="http://tempuri.org/Upload File To Server" style="document" />
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectRepName">
+      <soap:operation soapAction="http://tempuri.org/Get Repository Name from MetadataID" style="document" />
+      <wsdl:input name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataID">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataID">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDocumentFromServer">
+      <soap:operation soapAction="http://tempuri.org/DownloadDocumentFromServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument">
+      <soap:operation soapAction="http://tempuri.org/Check Document" style="document" />
+      <wsdl:input name="Check_x0020_Document">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Check_x0020_Document">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocumentCentrum">
+      <soap:operation soapAction="http://tempuri.org/Check DocumentCentrum" style="document" />
+      <wsdl:input name="Check_x0020_DocumentCentrum">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Check_x0020_DocumentCentrum">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectFolderCentrum2">
+      <soap:operation soapAction="http://tempuri.org/Select Folder" style="document" />
+      <wsdl:input name="Select_x0020_Folder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Select_x0020_Folder">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectFolderCentrum">
+      <soap:operation soapAction="http://tempuri.org/Select Folder Centrum" style="document" />
+      <wsdl:input name="Select_x0020_Folder_x0020_Centrum">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Select_x0020_Folder_x0020_Centrum">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FrameCount">
+      <soap:operation soapAction="http://tempuri.org/Get Pagecount of image" style="document" />
+      <wsdl:input name="Get_x0020_Pagecount_x0020_of_x0020_image">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Get_x0020_Pagecount_x0020_of_x0020_image">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServerSFTP">
+      <soap:operation soapAction="http://tempuri.org/Upload File To Server With Detail using SFTP" style="document" />
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTP">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTP">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServer">
+      <soap:operation soapAction="http://tempuri.org/Upload File To Server With Detail" style="document" />
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServerCentrum">
+      <soap:operation soapAction="http://tempuri.org/Upload File To Server With Detail For Centrum" style="document" />
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_Centrum">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_Centrum">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUniqueFileName">
+      <soap:operation soapAction="http://tempuri.org/GetUniqueFileName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMetaData">
+      <soap:operation soapAction="http://tempuri.org/InsertMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocument">
+      <soap:operation soapAction="http://tempuri.org/InsertDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectErrorDocs">
+      <soap:operation soapAction="http://tempuri.org/select error documents" style="document" />
+      <wsdl:input name="select_x0020_error_x0020_documents">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="select_x0020_error_x0020_documents">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolder">
+      <soap:operation soapAction="http://tempuri.org/InsertFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderAxisTrustee">
+      <soap:operation soapAction="http://tempuri.org/InsertFolderAxisTrustee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderCentrum">
+      <soap:operation soapAction="http://tempuri.org/InsertFolderCentrum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRepository">
+      <soap:operation soapAction="http://tempuri.org/LoadRepository" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMetaTemplate">
+      <soap:operation soapAction="http://tempuri.org/LoadMetaTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCategory">
+      <soap:operation soapAction="http://tempuri.org/LoadCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFolder">
+      <soap:operation soapAction="http://tempuri.org/LoadFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFolderAxisTrustee">
+      <soap:operation soapAction="http://tempuri.org/LoadFolderAxisTrustee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMetaDataCode">
+      <soap:operation soapAction="http://tempuri.org/LoadMetaDataCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDocument">
+      <soap:operation soapAction="http://tempuri.org/LoadDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap:operation soapAction="http://tempuri.org/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolderIfNeeded">
+      <soap:operation soapAction="http://tempuri.org/CreateFolderIfNeeded" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServer_AxisTrustee">
+      <soap:operation soapAction="http://tempuri.org/Upload Files of AxisTrustee To Server With Detail" style="document" />
+      <wsdl:input name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_Detail">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_Detail">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServer_FolderWise">
+      <soap:operation soapAction="http://tempuri.org/Upload Folders To Server With files&amp;Detail" style="document" />
+      <wsdl:input name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_Detail">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_Detail">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderForOthers">
+      <soap:operation soapAction="http://tempuri.org/InsertFolderForOthers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument_Reliance">
+      <soap:operation soapAction="http://tempuri.org/Check Document_Reliance" style="document" />
+      <wsdl:input name="Check_x0020_Document_Reliance">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Check_x0020_Document_Reliance">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument_SBIMutual">
+      <soap:operation soapAction="http://tempuri.org/Check Document_SBI Mutual Fund Trustee Company Private limited" style="document" />
+      <wsdl:input name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limited">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limited">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument_IDBI">
+      <soap:operation soapAction="http://tempuri.org/Check IDBI Bank Ltd" style="document" />
+      <wsdl:input name="Check_x0020_IDBI_x0020_Bank_x0020_Ltd">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Check_x0020_IDBI_x0020_Bank_x0020_Ltd">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ErrorDocument_IDBIAhm">
+      <soap:operation soapAction="http://tempuri.org/CorruptFile or duplicate file catch entry IDBI Ahmedabad" style="document" />
+      <wsdl:input name="CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_Ahmedabad">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_Ahmedabad">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocumentID">
+      <soap:operation soapAction="http://tempuri.org/get docid and metadataid" style="document" />
+      <wsdl:input name="get_x0020_docid_x0020_and_x0020_metadataid">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="get_x0020_docid_x0020_and_x0020_metadataid">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcelEntry_IDBIAhm">
+      <soap:operation soapAction="http://tempuri.org/excel entry IDBI Ahmedabad" style="document" />
+      <wsdl:input name="excel_x0020_entry_x0020_IDBI_x0020_Ahmedabad">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="excel_x0020_entry_x0020_IDBI_x0020_Ahmedabad">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocIdInExcel">
+      <soap:operation soapAction="http://tempuri.org/check if docid is already present in excelentry" style="document" />
+      <wsdl:input name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentry">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentry">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInExcelEntry_Error_IDBI_Ahm">
+      <soap:operation soapAction="http://tempuri.org/duplicate docid insert in excelentry error table" style="document" />
+      <wsdl:input name="duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_table">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_table">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorDocs">
+      <soap:operation soapAction="http://tempuri.org/Get erroneous docs list" style="document" />
+      <wsdl:input name="Get_x0020_erroneous_x0020_docs_x0020_list">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Get_x0020_erroneous_x0020_docs_x0020_list">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocEntryStatus">
+      <soap:operation soapAction="http://tempuri.org/Get missing Entry Docs List" style="document" />
+      <wsdl:input name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_List">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_List">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocNameInExcel">
+      <soap:operation soapAction="http://tempuri.org/check if docname is present in excelentry" style="document" />
+      <wsdl:input name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentry">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentry">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentStatusId">
+      <soap:operation soapAction="http://tempuri.org/update document status" style="document" />
+      <wsdl:input name="update_x0020_document_x0020_status">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="update_x0020_document_x0020_status">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DMSUploadDownloadWebServiceSoap12" type="tns:DMSUploadDownloadWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadDocumentToServer">
+      <soap12:operation soapAction="http://tempuri.org/Upload File To Server" style="document" />
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectRepName">
+      <soap12:operation soapAction="http://tempuri.org/Get Repository Name from MetadataID" style="document" />
+      <wsdl:input name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataID">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Get_x0020_Repository_x0020_Name_x0020_from_x0020_MetadataID">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDocumentFromServer">
+      <soap12:operation soapAction="http://tempuri.org/DownloadDocumentFromServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument">
+      <soap12:operation soapAction="http://tempuri.org/Check Document" style="document" />
+      <wsdl:input name="Check_x0020_Document">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Check_x0020_Document">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocumentCentrum">
+      <soap12:operation soapAction="http://tempuri.org/Check DocumentCentrum" style="document" />
+      <wsdl:input name="Check_x0020_DocumentCentrum">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Check_x0020_DocumentCentrum">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectFolderCentrum2">
+      <soap12:operation soapAction="http://tempuri.org/Select Folder" style="document" />
+      <wsdl:input name="Select_x0020_Folder">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Select_x0020_Folder">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectFolderCentrum">
+      <soap12:operation soapAction="http://tempuri.org/Select Folder Centrum" style="document" />
+      <wsdl:input name="Select_x0020_Folder_x0020_Centrum">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Select_x0020_Folder_x0020_Centrum">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FrameCount">
+      <soap12:operation soapAction="http://tempuri.org/Get Pagecount of image" style="document" />
+      <wsdl:input name="Get_x0020_Pagecount_x0020_of_x0020_image">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Get_x0020_Pagecount_x0020_of_x0020_image">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServerSFTP">
+      <soap12:operation soapAction="http://tempuri.org/Upload File To Server With Detail using SFTP" style="document" />
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTP">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_using_x0020_SFTP">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServer">
+      <soap12:operation soapAction="http://tempuri.org/Upload File To Server With Detail" style="document" />
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServerCentrum">
+      <soap12:operation soapAction="http://tempuri.org/Upload File To Server With Detail For Centrum" style="document" />
+      <wsdl:input name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_Centrum">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_File_x0020_To_x0020_Server_x0020_With_x0020_Detail_x0020_For_x0020_Centrum">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUniqueFileName">
+      <soap12:operation soapAction="http://tempuri.org/GetUniqueFileName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMetaData">
+      <soap12:operation soapAction="http://tempuri.org/InsertMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocument">
+      <soap12:operation soapAction="http://tempuri.org/InsertDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectErrorDocs">
+      <soap12:operation soapAction="http://tempuri.org/select error documents" style="document" />
+      <wsdl:input name="select_x0020_error_x0020_documents">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="select_x0020_error_x0020_documents">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolder">
+      <soap12:operation soapAction="http://tempuri.org/InsertFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderAxisTrustee">
+      <soap12:operation soapAction="http://tempuri.org/InsertFolderAxisTrustee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderCentrum">
+      <soap12:operation soapAction="http://tempuri.org/InsertFolderCentrum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRepository">
+      <soap12:operation soapAction="http://tempuri.org/LoadRepository" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMetaTemplate">
+      <soap12:operation soapAction="http://tempuri.org/LoadMetaTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCategory">
+      <soap12:operation soapAction="http://tempuri.org/LoadCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFolder">
+      <soap12:operation soapAction="http://tempuri.org/LoadFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFolderAxisTrustee">
+      <soap12:operation soapAction="http://tempuri.org/LoadFolderAxisTrustee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMetaDataCode">
+      <soap12:operation soapAction="http://tempuri.org/LoadMetaDataCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDocument">
+      <soap12:operation soapAction="http://tempuri.org/LoadDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap12:operation soapAction="http://tempuri.org/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolderIfNeeded">
+      <soap12:operation soapAction="http://tempuri.org/CreateFolderIfNeeded" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServer_AxisTrustee">
+      <soap12:operation soapAction="http://tempuri.org/Upload Files of AxisTrustee To Server With Detail" style="document" />
+      <wsdl:input name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_Detail">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_Files_x0020_of_x0020_AxisTrustee_x0020_To_x0020_Server_x0020_With_x0020_Detail">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocumentToServer_FolderWise">
+      <soap12:operation soapAction="http://tempuri.org/Upload Folders To Server With files&amp;Detail" style="document" />
+      <wsdl:input name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_Detail">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Upload_x0020_Folders_x0020_To_x0020_Server_x0020_With_x0020_files_x0026_Detail">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderForOthers">
+      <soap12:operation soapAction="http://tempuri.org/InsertFolderForOthers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument_Reliance">
+      <soap12:operation soapAction="http://tempuri.org/Check Document_Reliance" style="document" />
+      <wsdl:input name="Check_x0020_Document_Reliance">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Check_x0020_Document_Reliance">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument_SBIMutual">
+      <soap12:operation soapAction="http://tempuri.org/Check Document_SBI Mutual Fund Trustee Company Private limited" style="document" />
+      <wsdl:input name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limited">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Check_x0020_Document_SBI_x0020_Mutual_x0020_Fund_x0020_Trustee_x0020_Company_x0020_Private_x0020_limited">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocument_IDBI">
+      <soap12:operation soapAction="http://tempuri.org/Check IDBI Bank Ltd" style="document" />
+      <wsdl:input name="Check_x0020_IDBI_x0020_Bank_x0020_Ltd">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Check_x0020_IDBI_x0020_Bank_x0020_Ltd">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ErrorDocument_IDBIAhm">
+      <soap12:operation soapAction="http://tempuri.org/CorruptFile or duplicate file catch entry IDBI Ahmedabad" style="document" />
+      <wsdl:input name="CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_Ahmedabad">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CorruptFile_x0020_or_x0020_duplicate_x0020_file_x0020_catch_x0020_entry_x0020_IDBI_x0020_Ahmedabad">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocumentID">
+      <soap12:operation soapAction="http://tempuri.org/get docid and metadataid" style="document" />
+      <wsdl:input name="get_x0020_docid_x0020_and_x0020_metadataid">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="get_x0020_docid_x0020_and_x0020_metadataid">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcelEntry_IDBIAhm">
+      <soap12:operation soapAction="http://tempuri.org/excel entry IDBI Ahmedabad" style="document" />
+      <wsdl:input name="excel_x0020_entry_x0020_IDBI_x0020_Ahmedabad">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="excel_x0020_entry_x0020_IDBI_x0020_Ahmedabad">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocIdInExcel">
+      <soap12:operation soapAction="http://tempuri.org/check if docid is already present in excelentry" style="document" />
+      <wsdl:input name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentry">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="check_x0020_if_x0020_docid_x0020_is_x0020_already_x0020_present_x0020_in_x0020_excelentry">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInExcelEntry_Error_IDBI_Ahm">
+      <soap12:operation soapAction="http://tempuri.org/duplicate docid insert in excelentry error table" style="document" />
+      <wsdl:input name="duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_table">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="duplicate_x0020_docid_x0020_insert_x0020_in_x0020_excelentry_x0020_error_x0020_table">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorDocs">
+      <soap12:operation soapAction="http://tempuri.org/Get erroneous docs list" style="document" />
+      <wsdl:input name="Get_x0020_erroneous_x0020_docs_x0020_list">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Get_x0020_erroneous_x0020_docs_x0020_list">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocEntryStatus">
+      <soap12:operation soapAction="http://tempuri.org/Get missing Entry Docs List" style="document" />
+      <wsdl:input name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_List">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Get_x0020_missing_x0020_Entry_x0020_Docs_x0020_List">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDocNameInExcel">
+      <soap12:operation soapAction="http://tempuri.org/check if docname is present in excelentry" style="document" />
+      <wsdl:input name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentry">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="check_x0020_if_x0020_docname_x0020_is_x0020_present_x0020_in_x0020_excelentry">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentStatusId">
+      <soap12:operation soapAction="http://tempuri.org/update document status" style="document" />
+      <wsdl:input name="update_x0020_document_x0020_status">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="update_x0020_document_x0020_status">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DMSUploadDownloadWebService">
+    <wsdl:port name="DMSUploadDownloadWebServiceSoap" binding="tns:DMSUploadDownloadWebServiceSoap">
+      <soap:address location="http://localhost:2647/Services/DMSUploadDownloadWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DMSUploadDownloadWebServiceSoap12" binding="tns:DMSUploadDownloadWebServiceSoap12">
+      <soap12:address location="http://localhost:2647/Services/DMSUploadDownloadWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,49 @@
+
+.cartlink {	BORDER-RIGHT: #7f9db9 1px solid;  FONT-SIZE: 11px; BORDER-LEFT: #7f9db9 1px solid; WIDTH: 275px; COLOR: #014783; BORDER-BOTTOM: #7f9db9 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 50px;  TEXT-DECORATION: none; text-align: center ;   background-color:#ffffff;  }
+
+.searchtext1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.searchtext1 A {	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;}
+.searchtext1 A:hover {	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.greenbold {	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #5a8006; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.greenbold A {	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #5a8006; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.greenbold A:hover {	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #5a8006; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;}
+.boldvardana12 {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.vardana12black {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.vardana12black1 {	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.vardana12black A {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.vardana12black A:hover {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: underline;}
+.proddecrtab1 {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: none;}
+.proddecrtabdes {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: none;}
+.proddecrtab1 A {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #29467e; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: none;}
+.proddecrtab1 A:hover {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #29467e; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: underline;}
+.normalvardana12 {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 16px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.normalvardana12 A {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: underline;}
+.normalvardana12 A:hover {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.whiteverdana12 {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: 20px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: none;}
+.whiteverdana12 A {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: none;}
+.whiteverdana12 A:hover {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: underline;}
+.vardana12 {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 21px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.vardana12 A {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 21px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.vardana12 A:hover {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 21px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: underline;}
+.bluevardana {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #014783; LINE-HEIGHT: 16px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.bluevardana A {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: underline;}
+.bluevardana A:hover {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.bluevardana12 {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.bluevardana12 A {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: underline;}
+.bluevardana12 A:hover {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.red14vardanabold {	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #a51642; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: none;}
+.convardana12 {	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #08205c; LINE-HEIGHT: 16px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.convardana12redbold {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #a51642; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.vardana10new {	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.vardana10new A {	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.vardana10new A:hover {	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;}
+.vardana10 {	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.vardana10 A {	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;}
+.vardana10 A:hover {	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.footerwhitetext {	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: none;	BACKGROUND-IMAGE: url(../images/menu_bg1.jpg); VERTICAL-ALIGN: middle; HEIGHT: 38px;}
+.vardana12bluebold {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: none;}
+.vardana14bluebold {	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.blueboldvardana12 {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.blueboldvardana12 A {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;}
+.blueboldvardana12 A:hover {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #014783; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;}

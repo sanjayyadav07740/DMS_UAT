@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76B9107B-8CE0-4ACD-B8A8-B477F447E15B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMS.BusinessLogic</RootNamespace>
+    <AssemblyName>DMS.BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\DMS_BombayDyeing\DLLS\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\DMS_BombayDyeing\DLLS\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\DMS\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\..\DMS_BombayDyeing\DLLS\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfViewer">
+      <HintPath>..\..\DMS_BombayDyeing\DLLS\PdfViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Web References\Control\ApplicationManager.cs" />
+    <Compile Include="Web References\Control\CategoryManager.cs" />
+    <Compile Include="Web References\Control\DocumentManager.cs" />
+    <Compile Include="Web References\Control\DocumentRename.cs" />
+    <Compile Include="Web References\Control\FolderManager.cs" />
+    <Compile Include="Web References\Control\MetaTemplateManager.cs" />
+    <Compile Include="Web References\Control\ReportManager.cs" />
+    <Compile Include="Web References\Control\DocumentShareManager.cs" />
+    <Compile Include="Web References\Control\RepositoryManager.cs" />
+    <Compile Include="Web References\Control\RoleManager.cs" />
+    <Compile Include="Web References\Control\UserManager.cs" />
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="Entity\AppSetting.cs" />
+    <Compile Include="Entity\BulkUpload.cs" />
+    <Compile Include="Entity\Category.cs" />
+    <Compile Include="Entity\DataType.cs" />
+    <Compile Include="Entity\DocumentShare.cs" />
+    <Compile Include="Entity\Document.cs" />
+    <Compile Include="Entity\DocumentEntry.cs" />
+    <Compile Include="Entity\DocumentStatus.cs" />
+    <Compile Include="Entity\DocumentVersion.cs" />
+    <Compile Include="Entity\Folder.cs" />
+    <Compile Include="Entity\Licencing.cs" />
+    <Compile Include="Entity\MetaTemplateItem.cs" />
+    <Compile Include="Entity\LoginDetail.cs" />
+    <Compile Include="Entity\MetaData.cs" />
+    <Compile Include="Entity\MetaTemplate.cs" />
+    <Compile Include="Entity\MetaTemplateFields.cs" />
+    <Compile Include="Entity\Module.cs" />
+    <Compile Include="Entity\Record search.cs" />
+    <Compile Include="Entity\Report.cs" />
+    <Compile Include="Entity\Repository.cs" />
+    <Compile Include="Entity\Role.cs" />
+    <Compile Include="Entity\RolePermission.cs" />
+    <Compile Include="Entity\RoleModule.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="Entity\UserPermission.cs" />
+    <Compile Include="Entity\UserModule.cs" />
+    <Compile Include="Entity\UserType.cs" />
+    <Compile Include="Entity\FAS_invoice.cs" />
+    <Compile Include="LogManager.cs" />
+    <Compile Include="Entity\Mail_IDBI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityController.cs" />
+    <Compile Include="Service\DocumentForBulkUpload.cs" />
+    <Compile Include="Service\DocumentForLucene.cs" />
+    <Compile Include="Service\Lucene.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="Web References\DMSWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DMSWebService\DMSUploadDownloadWebService.wsdl" />
+    <None Include="Web References\DMSWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:2647/Services/DMSUploadDownloadWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DMSWebService\</RelPath>
+      <UpdateFromURL>http://localhost:2647/Services/DMSUploadDownloadWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DMS_BusinessLogic_DMSWebService_DMSUploadDownloadWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\DMSWebService\DMSUploadDownloadWebService.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

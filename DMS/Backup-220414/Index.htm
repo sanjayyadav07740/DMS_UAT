@@ -1,0 +1,249 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Welcome to DMS</title>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <link href="../Css/style_new.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/pro_dropdown_2_new.css" rel="stylesheet" type="text/css" />
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../css/main1.css" rel="stylesheet" type="text/css" />
+    <link href="../css/main2.css" rel="stylesheet" type="text/css" />
+    <link href="../css/skin.css" rel="stylesheet" type="text/css" />
+    <!-- JS -->
+    <script src="../js/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.jcarousel.pack.js" type="text/javascript"></script>
+    <script src="../js/jquery-func.js" type="text/javascript"></script>
+    <!-- End JS -->
+    <script language="JavaScript1.1" type="text/javascript">
+
+        var slidespeed = 3000
+        //specify images
+        var slideimages = new Array("../images/segregation.png", "../images/scanning-sm.png", "../images/barcoding.png", "../images/dataentry.png", "../images/doc-ser.png")
+        //specify corresponding links
+        var slidelinks = new Array("http://www.dynamicdrive.com", "http://wsabstract.com", "http://www.geocities.com")
+
+        var imageholder = new Array()
+        var ie55 = window.createPopup
+        for (i = 0; i < slideimages.length; i++) {
+            imageholder[i] = new Image()
+            imageholder[i].src = slideimages[i]
+        }
+
+        function gotoshow() {
+            window.location = slidelinks[whichlink]
+        }
+
+        //
+    </script>
+</head>
+<body>
+    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top">
+                <table width="1003" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="middlecontaner-top" align="center">
+                            <table width="883" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="left" style="padding-right: 0px; width: 725px; height: 20px;">
+                                        <img src="../Images/logo.jpg" width="180" height="80" />
+                                    </td>
+                                    <td align="left" style="padding-left: 10px; padding-top: 15px; height: 20px;" valign="top"
+                                        class="blue-but-2">
+                                        <a href="../Shared/LoginForm.aspx"><span style="color: White; font-size: 15px; padding-left: 50px;
+                                            padding-top: 0px;">Login to DMS</span></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="top" class="middlecontaner">
+                            <table width="883" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center">
+                                        <img src="../Images/menugr-fin.png" height="25" width="900" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top" style="width: 883; background-color: #ffffff;">
+                                        <table border="0" cellspacing="0" cellpadding="0" width="883">
+                                            <tr>
+                                                <td align="center">
+                                                    <table id="tblMainContent" runat="server" width="883" border="0" cellspacing="0"
+                                                        cellpadding="0">
+                                                        <tr>
+                                                            <td width="883" valign="top" style="padding-top: 10px;">
+                                                                <table width="883" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td align="center" colspan="3" width="883" valign="top">
+                                                                            <table border="0" cellpadding="0" cellspacing="0" width="883">
+                                                                                <tr>
+                                                                                    <td align="center" width="613" valign="top">
+                                                                                        <table border="1" cellpadding="0" cellspacing="0" width="613">
+                                                                                            <tr>
+                                                                                                <td align="center" valign="top">
+                                                                                                    <div class="featured_slider">
+                                                                                                        <!-- begin: sliding featured banner -->
+                                                                                                        <div id="slider">
+                                                                                                            <div id="slider-holder">
+                                                                                                                <ul>
+                                                                                                                    <li>
+                                                                                                                        <img src="../Images/digitization.png" width="613px" height="207px" alt="" /></li>
+                                                                                                                    <li>
+                                                                                                                        <img src="../Images/executive-team.png" width="613px" height="207px" alt="" /></li>
+                                                                                                                    <li>
+                                                                                                                        <img src="../Images/physical-storage.png" width="613px" height="207px" alt="" /></li>
+                                                                                                                    <li>
+                                                                                                                        <img src="../Images/robotic-storage.png" width="613px" height="207px" alt="" /></li>
+                                                                                                                </ul>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <!-- end: sliding featured banner -->
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                    <td class="vertdottedlinebg" style="width: 20px;">
+                                                                                        <img height="1" src="../images/pixel.gif" width="20px" />
+                                                                                    </td>
+                                                                                    <td align="left" valign="top" style="padding-right: 10px; width: 250px;">
+                                                                                        <div class="text_content">
+                                                                                            <a href="javascript:gotoshow()">
+                                                                                                <img src="../images/segregation.png" name="slide" border="0" style="filter: progid:DXImageTransform.Microsoft.Pixelate(MaxSquare=15,Duration=1)"></a>
+                                                                                            <script language="JavaScript1.1" type="text/javascript"> 
+<!--
+                                                                                                var whichlink = 0
+                                                                                                var whichimage = 0
+                                                                                                var pixeldelay = (ie55) ? document.images.slide.filters[0].duration * 1000 : 0
+                                                                                                function slideit() {
+                                                                                                    if (!document.images) return
+                                                                                                    if (ie55) document.images.slide.filters[0].apply()
+                                                                                                    document.images.slide.src = imageholder[whichimage].src
+                                                                                                    if (ie55) document.images.slide.filters[0].play()
+                                                                                                    whichlink = whichimage
+                                                                                                    whichimage = (whichimage < slideimages.length - 1) ? whichimage + 1 : 0
+                                                                                                    setTimeout("slideit()", slidespeed + pixeldelay)
+                                                                                                }
+                                                                                                slideit()
+ 
+//-->
+                                                                                            </script>
+                                                                                            <!--<img src="../Images/microsoft-logo2.jpg"  />-->
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="left" colspan="3" style="background-image: url(../images/toplineborder1.gif);
+                                                                            background-repeat: repeat-x; width: 883px;" valign="top">
+                                                                            <img height="7" src="../images/pixel.gif" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="left" class="shadow-text" style="width:613px;">
+                                                                            About Us
+                                                                        </td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td align="left" class="shadow-text">
+                                                                            Our Client
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td id="abouttext" valign="top">
+                                                                            SPL is 100% subsidiary of Stock Holding Corporation of India Ltd. (SHCIL) established
+                                                                            in 2006. SPL provides<br />
+                                                                            I. End to End Document Management Solutions<br />
+                                                                            II. Information Technology enabled Services(ITeS)<br />
+                                                                            SPL has also been granted In-principle approval by IRDA (Insurance Regulatory and
+                                                                            Development Authority) to set up the Insurance Repository Services (IR Services)
+                                                                            which would benefit the Insurance Industry and Policy Holders at large. SPL has
+                                                                            successfully implemented the Repository activities under the Regulator's Guidance.
+                                                                            The same is all set for a launch.. With proven track record, SPL is committed to
+                                                                            offer best of the Insurance Repository Services to match the industry..
+                                                                        </td>
+                                                                        <td align="left" style="height:20px;" class="vertdottedlinebg">
+                                                                            <img height="1" src="../images/pixel.gif" width="20px" />
+                                                                        </td>
+                                                                        <td align="right" >
+                                                                            <table border="0" cellpadding="0" cellspacing="0" style="font-size: 16px; height:175px;">
+                                                                                <tr>
+                                                                                    <td align="left" valign="middle" class="list-left-new1">
+                                                                                        <marquee id="marquee" direction="up" height="140" scrollamount="2" loop="true" onmouseover="marquee.stop();"
+                                                                                            onmouseout="marquee.start();">
+                                                                                            <ul>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> SEBI </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> DotEx International Ltd </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> State Bank Of India </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> SBI Life </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> IDBI Bank </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> MHADA </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> Shivaji University – Kolhapur </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> Reliance Securities </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> Federal Bank </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> Mahanagar Gas Limited </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> PNB Housing Finance Ltd </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> FT Group </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> CAG </li>
+                                                                                                <li style="height:40px;"><img src="../Images/marquee_bullet.png" /> Himachal Pradesh Education<br />&nbsp;&nbsp;&nbsp;&nbsp; Board, Dharamshala </li>
+                                                                                                <li style="height:40px;"><img src="../Images/marquee_bullet.png" /> Stock Holding Corporation of India &nbsp;&nbsp;&nbsp;&nbsp; Limited </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> India Post </li>
+                                                                                                <li style="height:40px;"><img src="../Images/marquee_bullet.png" /> Power Grid Corporation of India<br />&nbsp;&nbsp;&nbsp;&nbsp; Ltd. </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> AP Transco </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> Tolani Group </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> Repco Home Finance </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> Café Coffee Day </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> Punjab School Education Board </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> SHCIL Services </li>
+                                                                                                <li style="height:20px;"><img src="../Images/marquee_bullet.png" /> Bharat Diamond Bourse </li>
+                                                                                           </ul>
+                                                                                        </marquee>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #ffffff;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="middle" class="footer PrintButton" style="background-color: #ffffff;">
+                                        Copyright &copy; 2011 SHCIL Projects Ltd. All rights reserved.
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" class="middlecontaner-bottom">
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

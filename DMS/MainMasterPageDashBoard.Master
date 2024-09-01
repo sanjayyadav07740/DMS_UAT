@@ -1,0 +1,408 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="DMS.MainMasterPageDashBoard" CodeBehind="MainMasterPageDashBoard.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Page-Enter" content="Alpha(opacity=100)" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>DMS-UAT</title>
+
+   <%-- <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>--%>
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <%--<link href="Css/style_new.css" rel="stylesheet" type="text/css" />--%>
+    <link href="Css/pro_dropdown_2_new.css" rel="stylesheet" type="text/css" />
+    <link href="Css/main.css" rel="stylesheet" type="text/css" />
+    <link href="Css/main1.css" rel="stylesheet" type="text/css" />
+    <link href="Css/main2.css" rel="stylesheet" type="text/css" />
+
+   <%-- <link href="bootstrap/css/bootstrap.min.css" rel="Stylesheet" type="text/css" />--%>
+   <%-- <link href="bootstrap/css/bootstrap-theme.min.css" rel="Stylesheet" type="text/css" />--%>
+
+    
+
+    <style type="text/css" media="screen">
+        .PrintButton {
+            display: block;
+        }
+
+        #mnuMain ul li {
+        padding:5px 23px 10px 23px;
+        color:#ffffff;
+        }
+
+        #mnuMain ul li ul li {
+        padding:0px;
+        color:#ffffff;
+        border-bottom:1px solid #ffffff;
+        }
+        li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+        ul, li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+        #mnuMain a.static {
+    border-color: #7CCA27;
+    border-width: 0px;
+    color: White;
+    text-decoration: none;
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+}
+        #mnuMain a {
+    color: White;
+    font-family: Verdana;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    display: block;
+}
+    </style>
+
+    <script language="javascript" type="text/javascript">
+        function initRequest(sender, args) {
+            var pop = $find("mpopProgessExtender");
+            pop.show();
+        }
+
+        function endRequest(sender, args) {
+            var pop = $find("mpopProgessExtender");
+            pop.hide();
+        }
+    </script>
+</head>
+<body id="masterbody" runat="server">
+    <form id="frmMainMaster" runat="server" enctype="multipart/form-data" method="post">
+        <ajaxtoolkit:ToolkitScriptManager ID="tsmManager" runat="server">
+        </ajaxtoolkit:ToolkitScriptManager>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center" valign="top">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="left">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border-bottom: 1px solid #000000;">
+                                    <tr>
+                                        <td align="left" style="padding-left: 0px; padding-top: 10px; width: 450px;">
+                                            <img src="../Images/logo.jpg" width="180" height="85" />
+                                        </td>
+                                        <%--<td align="left" style="font-size: 28px; font-weight: bold; font-family: korinna; color: #032d54;">Document Management Solution</td>--%>
+                                        <td align="left" style="font-size: 28px; font-weight: bold; font-family: korinna; color: #364943">Document Management Solution</td>
+                                        <td> </td>
+                                        <td align="right" valign="top"style="padding-left: 0px; padding-top: 10px; width: 450px;" >
+                                           
+                                            <%-- <div style="" ><img src="../Images/V1_Virescent_Backdrop_1800x1800_4-6-2021-01.jpg" width="280" height="85"  />
+                                            </div>--%>
+
+                                 <%--    <table width="305" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td align="right" valign="middle" class="login-icon" style="width:70px;">
+                                                        <img src="../images/login-icon.jpg" width="22" height="20" /> 
+                                                    </td>
+                                                    <td align="left" valign="middle" class="login-text2">
+                                                        <strong>
+                                                            <asp:Label ID="lblUser" runat="server" ForeColor="Black" Font-Size="11px"></asp:Label>
+                                                        </strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="middle" class="login-text1">Last login:
+                                                    </td>
+                                                    <td align="left" valign="top" class="login-text1">
+                                                        <asp:Label ID="lblDateTime" runat="server" ForeColor="Black" Font-Size="11px"></asp:Label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" valign="top" style="padding-bottom: 3px;">
+                                                        <table width="305" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td width="305px" valign="top" align="right">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td valign="bottom">
+                                                                                <asp:ImageButton ID="ibtnHome" runat="server" SkinID="HomeButton" ToolTip="Home"
+                                                                                    CausesValidation="false" PostBackUrl="~/Shared/HomePage.aspx" />
+                                                                            </td>
+                                                                            <td valign="bottom">
+                                                                                <asp:ImageButton ID="itbnDashboard" runat="server" SkinID="DashBoardButton" ToolTip="Dashboard"
+                                                                                    CausesValidation="false" OnClick="ibtnDashBoard_Click" />
+                                                                            </td>
+                                                                            <td valign="bottom">
+                                                                                <asp:ImageButton ID="ibtnChangePassword" runat="server" SkinID="ChangePasswordButton"
+                                                                                    ToolTip="Change Password" CausesValidation="false" PostBackUrl="~/Shared/ChangePassword.aspx" />
+                                                                            </td>
+                                                                            <td valign="middle" align="right" style="padding-right: 20px;">
+                                                                                <asp:ImageButton ID="ibtnLogout" runat="server" SkinID="logoutButton" OnClick="ibtnLogout_Click"
+                                                                                    ToolTip="Logout" CausesValidation="false" />
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>--%>
+                                            
+                                        </td>
+                         
+                                  <td  align="right" valign="bottom">
+                                              
+                                        </td>
+                              
+                                    </tr>
+                                   
+                                  
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <%--<td style="background-color:#032d54;width:100%;padding:10px 0px;text-align:center;">--%>
+                            <td style="background-color:#496150;width:100%;padding:10px 0px;text-align:center;">
+                            
+                                <table border="0" cellspacing="0" cellpadding="0" style="width:1200px;margin:0 auto;text-align:center">
+                                    <tr>
+                                        <td id="Td1" align="left" runat="server">
+                                            <asp:Menu ID="mnuMain" runat="server" Orientation="Horizontal" Font-Names="Verdana"
+                                                ForeColor="White" Font-Size="14px" StaticEnableDefaultPopOutImage="false">
+                                                <StaticMenuItemStyle ForeColor="White" BorderColor="#7CCA27"
+                                                    BorderWidth="0px"  />
+                                                <StaticMenuStyle ForeColor="White" />
+<%--                                                <DynamicMenuItemStyle BackColor="#032d54" Height="25px" HorizontalPadding="25px"
+                                                    Width="200px" BorderColor="#7CCA27" BorderWidth="0px" VerticalPadding="5px" />--%>
+                                                    <DynamicMenuItemStyle BackColor="#496150" Height="35px" HorizontalPadding="25px"
+                                                    Width="250px" BorderColor="#7CCA27" BorderWidth="0px" VerticalPadding="8px" />
+                                                <DynamicMenuStyle Height="25px" HorizontalPadding="0px" VerticalPadding="2px" BorderColor="#7CCA27"
+                                                    BorderWidth="0px" />
+                                                <DynamicHoverStyle ForeColor="#ffffff" BackColor="#787878" />
+                                            </asp:Menu>
+                                        </td>
+                                        <td style="padding-left:250px">
+                                               <table width="305" border="0" cellspacing="0" cellpadding="0" style="padding-left:134px">
+                                                <tr>
+                                                    <td align="right" valign="middle" class="login-icon" style="width:70px;padding-left:200px">
+                                                        <img src="../images/login-icon.jpg" width="22" height="20" /> 
+                                                    </td>
+                                                    <td align="left" valign="middle" class="login-text2">
+                                                      <%--  <strong>--%>
+                                                        <div>
+                                                            <asp:Label ID="lblUser" runat="server" ForeColor="White" Font-Size="11px"></asp:Label>
+                                                            </div>
+                                                        <%--</strong>--%>
+                                                        <%--  <asp:Label ID="lblDateTime" runat="server" ForeColor="Black" Font-Size="11px"></asp:Label>
+                                                        <strong>--%>
+                                                    </td>
+                                                    <td colspan="3">
+                                                        <div>
+                                                            <table>
+                                                                <tr>
+                                                                    <td style="padding-left: 1px;display:none">
+                                                                                  <asp:ImageButton ID="ibtnHome" runat="server" SkinID="HomeButton" ToolTip="Home"
+                                                                                    CausesValidation="false" PostBackUrl="~/Shared/HomePage.aspx" />
+                                                                    </td>
+                                                                    <td style="padding-left: 1px;display:none">
+                                                                          <asp:ImageButton ID="itbnDashboard" runat="server" SkinID="DashBoardButton" ToolTip="Dashboard"
+                                                                                    CausesValidation="false" OnClick="ibtnDashBoard_Click" />
+                                                                    </td>
+                                                                    <td style="padding-left: 1px">
+                                                                               <asp:ImageButton ID="ibtnChangePassword" runat="server" SkinID="ChangePasswordButton"
+                                                                                    ToolTip="Change Password" CausesValidation="false" PostBackUrl="~/Shared/ChangePassword.aspx" />
+                                                                    </td>
+                                                                    <td style="padding-left:5px;">
+                                                                          <asp:ImageButton ID="ibtnLogout" runat="server" SkinID="logoutButton" OnClick="ibtnLogout_Click"
+                                                                                    ToolTip="Logout" CausesValidation="false" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                                      
+                                                                            </td>
+                                                                            <%--<td valign="bottom">--%>
+                                                                                <td>
+                                                                              
+                                                                            </td>
+                                                                            <%--<td valign="bottom">--%>
+                                                                                <td>
+                                                                         
+                                                                            </td>
+                                                                          <%--  <td valign="middle" align="right" style="padding-right: 20px;">
+                                                                              
+                                                                            </td>--%>
+                                                    <td style="display:none">
+                                                      <asp:Label ID="lblDateTime" runat="server" ForeColor="Black" Font-Size="11px"></asp:Label>
+                                                    
+                                                    </td>
+                                                </tr>
+                                              <%--  <tr>
+                                                    <td align="left" valign="middle" class="login-text1">Last login:
+                                                    </td>
+                                                    <td align="left" valign="top" class="login-text1">
+                                                        <asp:Label ID="lblDateTime" runat="server" ForeColor="Black" Font-Size="11px"></asp:Label>
+                                                    </td>
+                                                </tr>--%>
+                                                <tr>
+                                                    <td colspan="2" valign="top" style="padding-bottom: 3px;">
+                                                        <table width="305" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td width="305px" valign="top" align="right">
+                                                                    <table>
+                                                                        <tr>
+                                                                       
+                                                                            <%--<td valign="bottom">
+                                                                                <asp:ImageButton ID="ibtnHome" runat="server" SkinID="HomeButton" ToolTip="Home"
+                                                                                    CausesValidation="false" PostBackUrl="~/Shared/HomePage.aspx" />
+                                                                            </td>
+                                                                            <td valign="bottom">
+                                                                                <asp:ImageButton ID="itbnDashboard" runat="server" SkinID="DashBoardButton" ToolTip="Dashboard"
+                                                                                    CausesValidation="false" OnClick="ibtnDashBoard_Click" />
+                                                                            </td>
+                                                                            <td valign="bottom">
+                                                                                <asp:ImageButton ID="ibtnChangePassword" runat="server" SkinID="ChangePasswordButton"
+                                                                                    ToolTip="Change Password" CausesValidation="false" PostBackUrl="~/Shared/ChangePassword.aspx" />
+                                                                            </td>
+                                                                            <td valign="middle" align="right" style="padding-right: 20px;">
+                                                                                <asp:ImageButton ID="ibtnLogout" runat="server" SkinID="logoutButton" OnClick="ibtnLogout_Click"
+                                                                                    ToolTip="Logout" CausesValidation="false" />
+                                                                            </td>--%>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="top">
+                                <table border="0" cellspacing="0" cellpadding="0" width="1250px">
+                                <%--<tr>
+                                        <td align="left" valign="top" class="hor-dotted-divider">
+                                            &nbsp;
+                                        </td>
+                                    </tr>--%>
+                                    <tr>
+                                        <td style="width: 1250px;">
+                                            <asp:UpdatePanel ID="upanPanelDocument" runat="server">
+                                                <ContentTemplate>
+                                                    <asp:ContentPlaceHolder ID="cphDocument" runat="server">
+                                                    </asp:ContentPlaceHolder>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 1250px;">
+                                            <table id="tblMainContent" runat="server" width="1250px" border="0" cellspacing="0"
+                                                cellpadding="0">
+
+                                                <tr>
+                                                    <td style="padding-top: 10px;" height="0" valign="top">
+                                                        <table width="1250px" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td style="padding-top: 15px; padding-bottom: 10px;" class="tabborder" align="left">
+                                                                    <asp:UpdatePanel ID="upanPanelMain" runat="server">
+                                                                        <ContentTemplate>
+                                                                            <asp:ContentPlaceHolder ID="cphmain" runat="server">
+                                                                            </asp:ContentPlaceHolder>
+                                                                        </ContentTemplate>
+                                                                    </asp:UpdatePanel>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <%--<tr>
+                                        <td align="left" valign="top" class="hor-dotted-divider">&nbsp;
+                                        </td>
+                                    </tr>--%>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:5px;"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; position: relative; bottom: 0;border-top:1px solid #000000;width:100%;background-color:#ffffff;opacity:0.8;padding:8px;">Copyright © 2018 StockHolding DMS Ltd. All rights reserved.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="z-index: 100;">
+                                <asp:UpdatePanel ID="upanMessageExtender" runat="server">
+                                    <ContentTemplate>
+                                        <table id="tblMessage" runat="server" style="background-color: White; z-index: 100; display: none;">
+                                            <tr style="height: 30px;">
+                                                <td align="right" valign="middle" style="background-color:#032d54;" >
+                                                    <img src="Images/Close.png" id="imgCancel" runat="server" />&nbsp;&nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 125px;" id="trMessage" runat="server">
+                                                <td align="center" style="height: 125px;">
+                                                    <asp:Label ID="lblMessage" runat="server" Font-Size="12" Font-Bold="true" EnableTheming="false"
+                                                        Width="300" BorderColor="Black" CssClass="loginError"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <input type="button" id="btnOk" runat="server" value="Ok" style="width: 50px; background-color:gray;" class="button" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <ajaxtoolkit:ModalPopupExtender ID="mpopMessageExtender" runat="server" TargetControlID="btnHiddenMessage"
+                                            PopupControlID="tblMessage" CancelControlID="imgCancel" BackgroundCssClass="modalpopextenderbackground"
+                                            Drag="true" DropShadow="true" OkControlID="btnOk" PopupDragHandleControlID="trMessage">
+                                        </ajaxtoolkit:ModalPopupExtender>
+                                        <ajaxtoolkit:AnimationExtender ID="aneMessageExtender" runat="server" TargetControlID="tblMessage">
+                                            <Animations>
+                                        <OnLoad>
+                                            <FadeIn Duration=".3" Fps="20" />
+                                        </OnLoad>
+                                            </Animations>
+                                        </ajaxtoolkit:AnimationExtender>
+
+                                        <input type="button" id="btnHiddenMessage" runat="server" style="display: none;" />
+
+                                        <ajaxtoolkit:ModalPopupExtender ID="mpopProgessExtender" runat="server" TargetControlID="btnHiddenMessage" BehaviorID="mpopProgessExtender"
+                                            PopupControlID="tblProgress" BackgroundCssClass="modalpopextenderbackground" DropShadow="true" />
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+
+                                <asp:UpdateProgress ID="upgsProgress" runat="server" DisplayAfter="1000">
+                                    <ProgressTemplate>
+                                        <table id="tblProgress" runat="server" style="height: 120px; width: 120px; background-color: White; border: 1px solid black; z-index: 100; display: none;">
+                                            <tr>
+                                                <td>
+                                                    <asp:Image ID="imgLoading" runat="server" ImageUrl="~/Images/Loading.gif" Width="100px" Height="100px" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </ProgressTemplate>
+                                </asp:UpdateProgress>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequest);
+            Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(initRequest);
+        </script>
+    </form>
+</body>
+</html>
